@@ -1,0 +1,86 @@
+$font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
+$font-stack-Bahnschrift: 'Bahnschrift', 'Arial', sans-serif;
+
+%size-big {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+%size-medium {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+%size-small {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+%size-tiny {
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.title-font {
+  font-family: $font-stack-Benzin;
+  font-weight: 700;
+
+  h1 {
+    font-size: 100px;
+    line-height: auto;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 44px;
+  }
+}
+
+.subtitle-font {
+  font-size: $font-stack-Benzin;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: auto;
+}
+
+.regular-font {
+  font-family: $font-stack-Bahnschrift;
+  font-weight: 400;
+
+  &_size_big {
+    @extend %size-big;
+  }
+
+  &_size_medium {
+    @extend %size-medium;
+  }
+
+  &_size_small {
+    @extend %size-small;
+  }
+
+  &_size_tiny {
+    @extend %size-tiny;
+  }
+}
+
+.bold-font {
+  font-family: $font-stack-Bahnschrift;
+  font-weight: 700;
+
+  &_size_big {
+    @extend %size-big;
+  }
+
+  &_size_medium {
+    @extend %size-medium;
+  }
+
+  &_size_small {
+    @extend %size-small;
+  }
+
+  &_size_tiny {
+    @extend %size-tiny;
+  }
+}
