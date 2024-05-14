@@ -386,5 +386,29 @@ template {
   font-family: "Bahnschrift", "Arial", sans-serif;
   font-weight: 700;
 }
+.button {
+  height: 48px;
+  width: 248px;
+  color: white;
+  background-color: #B73A34;
+  border: 1px solid #B73A34;
+}
+.button :focus :hover {
+  background-color: #C40C0C;
+  border-color: #C40C0C;
+}
+.button :disabled {
+  background-color: #D2D1D0;
+  border-color: #D2D1D0;
+  border-radius: 6px;
+}
+.button_hollow {
+  color: #B73A34;
+  background-color: white;
+}
+.button_hollow :disabled {
+  color: #D2D1D0;
+  background-color: white;
+}
 
 /*# sourceMappingURL=index.css.map */
