@@ -11,6 +11,12 @@
   },
   "rules": {
     "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
-    "@stylistic/linebreak-style:": 0
+         "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ]
   }
 }
