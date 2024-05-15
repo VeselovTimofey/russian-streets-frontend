@@ -1,0 +1,13 @@
+.input {
+  border: 1px solid rgb(8, 8, 8);
+}
+
+.button {
+  border: 1px solid rgb(135, 67, 212);
+}
+
+.form {
+  border: 1px solid red;
+    display: flex;
+  flex-direction: column;
+}

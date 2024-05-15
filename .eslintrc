@@ -4,16 +4,13 @@
     "commonjs": true,
     "es2021": true
   },
-  "extends": [
-    "eslint:recommended",
-    "airbnb",
-    "plugin:react/recommended"
-  ],
+  "extends": ["eslint:recommended", "airbnb", "plugin:react/recommended"],
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest"
   },
   "rules": {
-    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }]
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
+    "@stylistic/linebreak-style:": 0
   }
 }
