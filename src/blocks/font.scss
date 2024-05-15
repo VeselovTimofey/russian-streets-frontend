@@ -1,29 +1,15 @@
 $font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
-$font-stack-Bahnschrift: 'Bahnschrift', 'Arial', sans-serif;
-
-%size-big {
-  font-size: 16px;
-  line-height: 20px;
-}
-
-%size-medium {
-  font-size: 14px;
-  line-height: 20px;
-}
-
-%size-small {
-  font-size: 13px;
-  line-height: 16px;
-}
-
-%size-tiny {
-  font-size: 11px;
-  line-height: 12px;
-}
 
 .title-font {
   font-family: $font-stack-Benzin;
-  font-weight: 700;
+
+  &_bold {
+    font-weight: 700;
+  }
+
+  &_regular {
+    font-weight: 400;
+  }
 
   h1 {
     font-size: 100px;
@@ -43,44 +29,34 @@ $font-stack-Bahnschrift: 'Bahnschrift', 'Arial', sans-serif;
   line-height: auto;
 }
 
-.regular-font {
-  font-family: $font-stack-Bahnschrift;
-  font-weight: 400;
+.text-font {
+  font-family: 'Bahnschrift', 'Arial', sans-serif;
+  
+  &_bold {
+    font-weight: 700;
+  }
+
+  &_regular {
+    font-weight: 400;
+  }
 
   &_size_big {
-    @extend %size-big;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   &_size_medium {
-    @extend %size-medium;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   &_size_small {
-    @extend %size-small;
+    font-size: 13px;
+    line-height: 16px;
   }
 
   &_size_tiny {
-    @extend %size-tiny;
-  }
-}
-
-.bold-font {
-  font-family: $font-stack-Bahnschrift;
-  font-weight: 700;
-
-  &_size_big {
-    @extend %size-big;
-  }
-
-  &_size_medium {
-    @extend %size-medium;
-  }
-
-  &_size_small {
-    @extend %size-small;
-  }
-
-  &_size_tiny {
-    @extend %size-tiny;
+    font-size: 11px;
+    line-height: 12px;
   }
 }
