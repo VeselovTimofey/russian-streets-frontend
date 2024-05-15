@@ -1,0 +1,21 @@
+form {
+  &__input {
+    border: 1px solid #797981;
+
+    :disabled {
+      border-color: #DDE0E4;
+    }
+
+    :focus {
+      border: 2px solid #1E5B9C;
+    }
+
+    :valid {
+      border-color: #DDE0E4;
+    }
+    
+    :invalid {
+      border-color: #FF0200;
+    }
+  }
+}
