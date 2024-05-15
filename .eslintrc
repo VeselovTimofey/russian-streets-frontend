@@ -14,6 +14,7 @@
     "ecmaVersion": "latest"
   },
   "rules": {
-    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }]
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
+    "linebreak-style": 0
   }
 }
