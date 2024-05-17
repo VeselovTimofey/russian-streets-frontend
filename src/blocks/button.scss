@@ -5,12 +5,12 @@
   background-color: #B73A34;
   border: 1px solid #B73A34;
 
-  :focus :hover {
+  &:focus &:hover {
     background-color: #C40C0C;
     border-color: #C40C0C;
   }
 
-  :disabled {
+  &:disabled {
     background-color: #D2D1D0;
     border-color: #D2D1D0;
     border-radius: 6px;
@@ -20,7 +20,7 @@
     color: #B73A34;
     background-color: white;
 
-    :disabled {
+    &:disabled {
       color: #D2D1D0;
       background-color: white;
     }

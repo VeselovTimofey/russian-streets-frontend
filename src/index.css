@@ -326,66 +326,89 @@ template {
 
 @font-face {
   font-family: "Benzin";
-  src: url("Benzin-Medium.woff2") format("woff2");
+  src: url("/src/vendor/fonts/Benzin-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Benzin";
+  src: url("/src/vendor/fonts/Benzin-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Benzin";
-  src: url("Benzin-Bold.woff2") format("woff2");
+  src: url("/src/vendor/fonts/Benzin-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
-.bold-font_size_big, .regular-font_size_big {
-  font-size: 16px;
-  line-height: 20px;
+.page h1, .page h2, .page h3, .page h4, .page h5, .page h6, .page p {
+  margin: 0;
 }
-
-.bold-font_size_medium, .regular-font_size_medium {
-  font-size: 14px;
-  line-height: 20px;
+.page h1 {
+  font-size: 100px;
+  line-height: auto;
 }
-
-.bold-font_size_small, .regular-font_size_small {
-  font-size: 13px;
-  line-height: 16px;
+.page h2 {
+  font-size: 48px;
+  line-height: 44px;
 }
-
-.bold-font_size_tiny, .regular-font_size_tiny {
-  font-size: 11px;
-  line-height: 12px;
+.page h3 {
+  font-size: 34px;
+  line-height: 40px;
 }
 
 .title-font {
   font-family: "Benzin", "Bahnschrift", sans-serif;
+}
+.title-font_bold {
   font-weight: 700;
 }
-.title-font h1 {
-  font-size: 100px;
-  line-height: auto;
-}
-.title-font h2 {
-  font-size: 48px;
-  line-height: 44px;
+.title-font_regular {
+  font-weight: 400;
 }
 
 .subtitle-font {
-  font-size: "Benzin", "Bahnschrift", sans-serif;
-  font-weight: 500;
+  font-family: "Benzin", "Bahnschrift", sans-serif;
   font-size: 20px;
   line-height: auto;
 }
-
-.regular-font {
-  font-family: "Bahnschrift", "Arial", sans-serif;
+.subtitle-font_medium {
+  font-weight: 500;
+}
+.subtitle-font_regular {
   font-weight: 400;
 }
-.bold-font {
+
+.text-font {
   font-family: "Bahnschrift", "Arial", sans-serif;
+}
+.text-font_bold {
   font-weight: 700;
 }
+.text-font_regular {
+  font-weight: 400;
+}
+.text-font_size_big {
+  font-size: 16px;
+  line-height: 20px;
+}
+.text-font_size_medium {
+  font-size: 14px;
+  line-height: 20px;
+}
+.text-font_size_small {
+  font-size: 13px;
+  line-height: 16px;
+}
+.text-font_size_tiny {
+  font-size: 11px;
+  line-height: 12px;
+}
+
 .button {
   height: 48px;
   width: 248px;
@@ -393,11 +416,11 @@ template {
   background-color: #B73A34;
   border: 1px solid #B73A34;
 }
-.button :focus :hover {
+.button:focus .button:hover {
   background-color: #C40C0C;
   border-color: #C40C0C;
 }
-.button :disabled {
+.button:disabled {
   background-color: #D2D1D0;
   border-color: #D2D1D0;
   border-radius: 6px;
@@ -406,9 +429,49 @@ template {
   color: #B73A34;
   background-color: white;
 }
-.button_hollow :disabled {
+.button_hollow:disabled {
   color: #D2D1D0;
   background-color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.form__input {
+  width: 306px;
+  height: 38px;
+  padding-left: 12px;
+  border: 1px solid #797981;
+  border-radius: 4px;
+}
+.form__input:disabled {
+  border-color: #DDE0E4;
+}
+.form__input:focus {
+  outline: none;
+  border: 2px solid #1E5B9C;
+}
+.form__input:invalid {
+  border: 1px solid #FF0200;
+}
+.form__input-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.form__input-error {
+  color: #FF0200;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 26px;
+  margin-left: 150px;
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=index.css.map */

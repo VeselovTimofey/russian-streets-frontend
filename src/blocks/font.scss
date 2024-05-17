@@ -10,23 +10,20 @@ $font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
   &_regular {
     font-weight: 400;
   }
-
-  h1 {
-    font-size: 100px;
-    line-height: auto;
-  }
-
-  h2 {
-    font-size: 48px;
-    line-height: 44px;
-  }
 }
 
 .subtitle-font {
-  font-size: $font-stack-Benzin;
-  font-weight: 500;
+  font-family: $font-stack-Benzin;
   font-size: 20px;
   line-height: auto;
+
+  &_medium {
+    font-weight: 500;
+  }
+
+  &_regular {
+    font-weight: 400;
+  }
 }
 
 .text-font {
