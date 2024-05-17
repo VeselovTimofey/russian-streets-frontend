@@ -416,7 +416,7 @@ template {
   background-color: #B73A34;
   border: 1px solid #B73A34;
 }
-.button:focus .button:hover {
+.button:focus, .button:hover {
   background-color: #C40C0C;
   border-color: #C40C0C;
 }
@@ -428,6 +428,9 @@ template {
 .button_hollow {
   color: #B73A34;
   background-color: white;
+}
+.button_hollow:focus, .button_hollow:hover {
+  color: white;
 }
 .button_hollow:disabled {
   color: #D2D1D0;

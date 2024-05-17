@@ -47,6 +47,12 @@ function TestPage() {
           </label>
         </form>
       </section>
+      <section className="section">
+        <button className="button text-font text-font_bold text-font_size_big" type="button">Понятно</button>
+        <button className="button text-font text-font_bold text-font_size_big" type="button" disabled>Понятно</button>
+        <button className="button button_hollow text-font text-font_bold text-font_size_big" type="button">Понятно</button>
+        <button className="button button_hollow text-font text-font_bold text-font_size_big" type="button" disabled>Понятно</button>
+      </section>
     </>
   );
 }
