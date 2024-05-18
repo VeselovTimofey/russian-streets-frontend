@@ -1,0 +1,32 @@
+.button {
+  height: 48px;
+  width: 248px;
+  color: white;
+  background-color: #B73A34;
+  border: 1px solid #B73A34;
+
+  &:focus, &:hover {
+    background-color: #C40C0C;
+    border-color: #C40C0C;
+  }
+
+  &:disabled {
+    background-color: #D2D1D0;
+    border-color: #D2D1D0;
+    border-radius: 6px;
+  }
+
+  &_hollow {
+    color: #B73A34;
+    background-color: white;
+
+    &:focus, &:hover {
+      color: white;
+    }
+
+    &:disabled {
+      color: #D2D1D0;
+      background-color: white;
+    }
+  }
+}
