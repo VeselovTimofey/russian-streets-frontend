@@ -1,22 +1,23 @@
-{
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es2021": true
-  },
-  "extends": ["eslint:recommended", "airbnb", "plugin:react/recommended"],
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": "latest"
-  },
-  "rules": {
-    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
-         "no-multiple-empty-lines": [
-      "error",
-      {
-        "max": 1,
-        "maxEOF": 1
-      }
-    ]
-  }
-}
+//{
+//  "env": {
+//    "browser": true,
+//    "commonjs": true,
+//    "es2021": true
+//  },
+//  "extends": ["eslint:recommended", "airbnb", "plugin:react/recommended"],
+//  "parserOptions": {
+//    "sourceType": "module",
+//    "ecmaVersion": "latest"
+//  },
+//  "rules": {
+//    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
+//    "linebreak-style": 0,
+//         "no-multiple-empty-lines": [
+//      "error",
+//      {
+//        "max": 1,
+//        "maxEOF": 1
+//      }
+//    ]
+//  }
+//}

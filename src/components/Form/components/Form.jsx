@@ -1,16 +1,8 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-import Input from './Input';
-import Button from './Button';
-
-const Form = () => {
-  return (
-    <form className={styles.form}>
-      <Input />
-      <Button />
-    </form>
-  );
+const Form = ({ children }) => {
+  return <form className={styles.form}>{children}</form>;
 };
 
 export default Form;
