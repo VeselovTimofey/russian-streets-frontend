@@ -1,8 +1,6 @@
 $font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
 
-.title-font {
-  font-family: $font-stack-Benzin;
-
+@mixin text-weight {
   &_bold {
     font-weight: 700;
   }
@@ -10,6 +8,12 @@ $font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
   &_regular {
     font-weight: 400;
   }
+}
+
+.title-font {
+  font-family: $font-stack-Benzin;
+
+  @include text-weight;
 }
 
 .subtitle-font {
@@ -29,13 +33,7 @@ $font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
 .text-font {
   font-family: 'Bahnschrift', 'Arial', sans-serif;
   
-  &_bold {
-    font-weight: 700;
-  }
-
-  &_regular {
-    font-weight: 400;
-  }
+  @include text-weight;
 
   &_size_big {
     font-size: 16px;
