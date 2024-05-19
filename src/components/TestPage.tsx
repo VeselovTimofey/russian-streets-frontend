@@ -1,6 +1,3 @@
-/* eslint-disable react/self-closing-comp */
-import React from 'react';
-
 function TestPage() {
   return (
     <>
@@ -33,17 +30,17 @@ function TestPage() {
           <label className="form__input-elements" htmlFor="form-disabled">
             <p className="text-font text-font_bold text-font_size_small">Заголовок(Неактивный)</p>
             <input className="form__input text-font text-font_regular text-font_size_medium" type="text" name="disabled" id="form-disabled" placeholder="подсказка" disabled />
-            <div className="text-font text-font_regular text-font_size_tiny form__input-error" htmlFor="form-disabled"></div>
+            <div className="text-font text-font_regular text-font_size_tiny form__input-error"></div>
           </label>
           <label className="form__input-elements" htmlFor="form-text">
             <p className="text-font text-font_bold text-font_size_small">Заголовок</p>
             <input className="form__input text-font text-font_regular text-font_size_medium" type="text" name="text" id="form-text" placeholder="подсказка" />
-            <div className="text-font text-font_regular text-font_size_tiny form__input-error" htmlFor="form-text"></div>
+            <div className="text-font text-font_regular text-font_size_tiny form__input-error"></div>
           </label>
           <label className="form__input-elements" htmlFor="form-error">
             <p className="text-font text-font_bold text-font_size_small">Заголовок(Ошибка)</p>
             <input className="form__input" type="email" name="error" id="form-error" required />
-            <div className="text-font text-font_regular text-font_size_tiny form__input-error" htmlFor="form-error">Введите адрес почты вида Ivan@mail.ru</div>
+            <div className="text-font text-font_regular text-font_size_tiny form__input-error">Введите адрес почты вида Ivan@mail.ru</div>
           </label>
         </form>
       </section>
