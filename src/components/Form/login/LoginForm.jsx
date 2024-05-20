@@ -19,7 +19,7 @@ const LoginForm = () => {
         {...register('email', {
           required: 'Это поле обязательно для заполнения!',
         })}
-        type='emeil'
+        type='email'
         name='email'
         placeholder='Введите свой адресс электронной почты'
       />
@@ -43,4 +43,3 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
-//  <div className={styles.wrapper}></div>
