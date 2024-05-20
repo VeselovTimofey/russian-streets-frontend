@@ -1,48 +1,79 @@
-import { useForm, SubmitHandler } from 'react-hook-form';
+import React, { useId } from 'react';
+import { useForm } from 'react-hook-form';
 import styles from './styles.module.css';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
 
-type Inputs = {
+type FormData = {
   email: string;
   password: string;
+  rememberMe: boolean;
 };
 
-let userSchema = yup
-  .object({
-    password: yup.string().required(),
-    email: yup.string().email().required(),
-  })
-  .required();
-
-export default function LoginForm() {
+const LoginForm = () => {
+  const id: string = useId();
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm<Inputs>({
-    mode: 'onBlur',
-    resolver: yupResolver(userSchema),
-  });
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+    formState: { isSubmitting, errors },
+  } = useForm<FormData>({ mode: 'onBlur' });
+
+  const onSubmit = (data: FormData) => console.log(data);
 
   return (
-    <>
-      {' '}
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-        <input defaultValue='test' {...register('email', { required: true })} />
-        {errors.email && <p>{errors?.email?.message || 'Error!'}</p>}
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      <div className={styles.wrapper_input}>
+        <label htmlFor={`${id}-email`}></label>
+        Email
         <input
-          {...register('password', {
-            required: 'Это поле обязательно для заполнения!',
-            //pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$',
+          id={`${id}-email`}
+          type='email'
+          autoComplete='email'
+          aria-describedby={`${id}-email-error-message`}
+          {...register('email', {
+            required: 'Error:  Это поле обязательно для заполнения!',
+            pattern: {
+              value:
+                /^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/,
+              message: 'Error: Введите валидный Email!',
+            },
           })}
         />
+        {errors.email && (
+          <p
+            id={`${id}-email-error-message`}
+            aria-live='assertive'
+            className={styles.errors}
+          >
+            {errors?.email?.message || 'Error!'}
+          </p>
+        )}
+      </div>
+      <div className={styles.wrapper_input}>
+        <label htmlFor={`${id}-password`}>Password</label>
+        <input
+          id={`${id}-password`}
+          type='password'
+          autoComplete='current-password'
+          aria-describedby={`${id}-password-error-message`}
+          {...register('password', {
+            required: 'Error: Это поле обязательно для заполнения!',
+          })}
+        />
+        {errors.password && (
+          <p id={`${id}-password-error-message`} className={styles.errors}>
+            {errors?.password?.message || 'Error!'}
+          </p>
+        )}
+      </div>
+      <div>
+        <label htmlFor='rememberMe'>Remember me</label>
+        <input type='checkbox' {...register('rememberMe')} />
+      </div>
 
-        {errors.password && <p>{errors?.password?.message || 'Error!'}</p>}
-
-        <input type='submit' />
-      </form>
-    </>
+      <button type='submit' disabled={isSubmitting}>
+        Sign in
+      </button>
+    </form>
   );
-}
+};
+
+export default LoginForm;

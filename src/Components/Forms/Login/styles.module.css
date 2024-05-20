@@ -8,3 +8,10 @@ border: 1px solid red;
     display: flex;
   flex-direction: column;
 }
+.wrapper_input{
+  border: 1px solid rgb(29, 5, 136);
+}
+
+.errors {
+  color: red
+}
