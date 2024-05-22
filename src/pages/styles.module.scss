@@ -1,0 +1,48 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.left_block {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background: #222222;
+}
+.form {
+  max-width: 555px;
+  padding: 80px 90px;
+  & h1 {
+    font-family: Bahnschrift;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+.right_block {
+  width: 48%;
+  height: 100%;
+  background-image: url(../assets/Address.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  a {
+    padding: 0 10px;
+    background: #222222;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+  }
+}
