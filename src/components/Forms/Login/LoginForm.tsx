@@ -19,7 +19,7 @@ const LoginForm = () => {
   const onSubmit = (data: FormData) => console.log(data);
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.wrapper_input}>
         <label htmlFor={`${id}-email`}></label>
         Email
@@ -30,11 +30,6 @@ const LoginForm = () => {
           aria-describedby={`${id}-email-error-message`}
           {...register('email', {
             required: 'Error:  Это поле обязательно для заполнения!',
-            pattern: {
-              value:
-                /^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/,
-              message: 'Error: Введите валидный Email!',
-            },
           })}
         />
         {errors.email && (

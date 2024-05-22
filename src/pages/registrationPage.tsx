@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './styles.module.scss';
-import RegisterForm from '../components/registerForm';
+import RegisterForm from '../components/Forms/Register/registerForm';
 import { Link, Outlet, useMatch } from 'react-router-dom';
 import CustomLink from '../components/CastomLink/CustomLink';
 
