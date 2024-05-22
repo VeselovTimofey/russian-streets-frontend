@@ -151,11 +151,14 @@ const RegisterForm = () => {
           </p>
         </label>
         <label className={styles.label_checkbox}>
-          {' '}
-          <input {...register('agreement')} type='checkbox' />
+          <input
+            {...register('agreement', { required: true })}
+            type='checkbox'
+          />
+
           <p>
-            Регистрируясь, я соглашаюсь на{' '}
-            <a>обработку моих персональных данных</a>
+            Регистрируясь, я соглашаюсь на
+            <a> обработку моих персональных данных</a>
           </p>
         </label>
       </div>

@@ -10,8 +10,9 @@
 
 .left_block {
   display: flex;
+  min-height: 100vh;
+  height: auto;
   width: 50%;
-  height: 100%;
   background: #222222;
 }
 .form {
@@ -28,7 +29,7 @@
 .right_block {
   width: 48%;
   height: 100%;
-  background-image: url(../assets/Address.png);
+  background-image: url(../../assets/Address.png);
   background-repeat: no-repeat;
   background-size: cover;
 }

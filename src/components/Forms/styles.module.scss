@@ -1,6 +1,8 @@
 .errors {
   color: red;
   font-size: 14px;
+  padding: 0;
+  margin: 0;
 }
 
 .form {
@@ -32,9 +34,13 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
+    & a {
+      cursor: pointer;
+    }
   }
-  input {
-    margin: 0;
-    padding: 0;
-  }
+}
+.input {
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
 }
