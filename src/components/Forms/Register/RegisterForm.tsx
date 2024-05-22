@@ -1,6 +1,6 @@
-import React, { useId } from 'react';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import styles from './styles.module.css';
+import { useId } from 'react';
+import { useForm } from 'react-hook-form';
+import styles from '../styles.module.scss';
 
 type FormData = {
   firstName: string;
@@ -19,7 +19,7 @@ const RegisterForm = () => {
     register,
     handleSubmit,
     watch,
-    formState: { isSubmitting, errors },
+    formState: { errors },
   } = useForm<FormData>({ mode: 'onBlur' });
 
   const onSubmit = (data: FormData) => console.log(data);
@@ -142,7 +142,7 @@ const RegisterForm = () => {
       )}
 
       <div className={styles.checkbox_block}>
-        <label className={styles.label}>
+        <label className={styles.label_checkbox}>
           {' '}
           <input {...register('mailing')} type='checkbox' />
           <p>
@@ -150,11 +150,12 @@ const RegisterForm = () => {
             (необязательно)
           </p>
         </label>
-        <label className={styles.label}>
+        <label className={styles.label_checkbox}>
           {' '}
           <input {...register('agreement')} type='checkbox' />
           <p>
-            Регистрируясь, я соглашаюсь на обработку моих персональных данных
+            Регистрируясь, я соглашаюсь на{' '}
+            <a>обработку моих персональных данных</a>
           </p>
         </label>
       </div>

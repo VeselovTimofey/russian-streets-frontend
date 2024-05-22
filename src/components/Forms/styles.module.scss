@@ -1,0 +1,40 @@
+.errors {
+  color: red;
+  font-size: 10px;
+}
+
+.form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  & label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+
+.checkbox_block {
+  display: flex;
+  flex-direction: column;
+  & p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.label_checkbox {
+  display: flex;
+  align-items: baseline;
+  p {
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  input {
+    margin: 0;
+    padding: 0;
+  }
+}
