@@ -15,7 +15,7 @@ const CustomLink: FC<PropsType> = ({ children, to, ...props }) => {
       {...props}
       style={{
         color: 'white',
-        borderBottom: match ? '1px solid white' : '',
+        borderBottom: match ? '1px solid #F4F4F4' : '',
       }}
     >
       {children}
