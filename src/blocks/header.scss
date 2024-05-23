@@ -1,0 +1,33 @@
+.header {
+  height: 92px;
+  width: 100%;
+  position: sticky;
+  top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #222222;
+
+  &__logo {}
+
+  &__nav {
+  }
+
+  &__nav-menu {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+  }
+
+  &__menu {
+    width: 29%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+  }
+}

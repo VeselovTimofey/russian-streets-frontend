@@ -2,8 +2,11 @@
 
 @import 'vendor/fonts/stylesheet';
 
-@import 'blocks/page.scss';
+@import 'blocks/page';
 @import 'blocks/font';
 @import 'blocks/button';
 @import 'blocks/form';
 @import 'blocks/section';
+@import 'blocks/header';
+@import 'blocks/image-button';
+@import 'blocks/popup';

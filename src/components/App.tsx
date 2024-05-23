@@ -1,9 +1,9 @@
-import TestPage from "./TestPage";
+import Header from './Header.tsx';
 
 function App() {
   return (
-    <TestPage />
+    <Header />
   );
-};
+}
 
-export default App
+export default App;

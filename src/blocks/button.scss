@@ -1,9 +1,8 @@
 .button {
-  height: 48px;
-  width: 248px;
   color: white;
   background-color: #B73A34;
   border: 1px solid #B73A34;
+  white-space: nowrap;
 
   &:focus, &:hover {
     background-color: #C40C0C;
@@ -28,5 +27,14 @@
       color: #D2D1D0;
       background-color: white;
     }
+  }
+
+  &_size_small {
+    padding: 10px 20px;
+  }
+
+  &_size_medium {
+    height: 68px;
+    width: 304px;
   }
 }

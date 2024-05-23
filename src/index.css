@@ -345,8 +345,21 @@ template {
   font-style: normal;
   font-display: swap;
 }
+.page {
+  max-width: 1440px;
+  overflow-x: scroll;
+}
 .page h1, .page h2, .page h3, .page h4, .page h5, .page h6, .page p {
   margin: 0;
+}
+.page ul {
+  margin: 0;
+  padding: 0;
+}
+.page li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .page h1 {
   font-size: 100px;
@@ -410,11 +423,10 @@ template {
 }
 
 .button {
-  height: 48px;
-  width: 248px;
   color: white;
   background-color: #B73A34;
   border: 1px solid #B73A34;
+  white-space: nowrap;
 }
 .button:focus, .button:hover {
   background-color: #C40C0C;
@@ -435,6 +447,13 @@ template {
 .button_hollow:disabled {
   color: #D2D1D0;
   background-color: white;
+}
+.button_size_small {
+  padding: 10px 20px;
+}
+.button_size_medium {
+  height: 68px;
+  width: 304px;
 }
 
 .form {
@@ -475,6 +494,96 @@ template {
   gap: 26px;
   margin-left: 150px;
   margin-bottom: 50px;
+}
+
+.header {
+  height: 92px;
+  width: 100%;
+  position: sticky;
+  top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #222222;
+}
+.header__nav-menu {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+.header__menu {
+  width: 29%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header__link {
+  text-decoration: none;
+  color: white;
+}
+
+.image-button {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+.popup {
+  display: none;
+}
+.popup ul {
+  margin: 20px;
+}
+.popup_active {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.popup__background_black {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup__background_grey {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.popup__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 386px;
+  background-color: #222222;
+  z-index: 2;
+}
+.popup__menu_list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+}
+.popup__search-element {
+  width: 100vw;
+  position: sticky;
+  top: 172px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup__search-input {
+  height: 52px;
+  width: 90vw;
+  color: #DDE0E4;
+  background-color: #222222;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  z-index: 2;
+}
+.popup__search-input::placeholder {
+  color: #FFFFFF;
+  text-align: right;
 }
 
 /*# sourceMappingURL=index.css.map */
