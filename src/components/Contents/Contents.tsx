@@ -1,14 +1,17 @@
 import styles from './styles.module.scss';
 
-const title = '123';
-const Contents = () => {
+const Contents = ({ data }: propsType[]) => {
   return (
     <div className={styles.section}>
-      <div className={styles.image_block}>123</div>
-      <div className={styles.caption_block}>
-        <h2>{title}</h2>
-        <p></p>
-      </div>
+      {data.map((item, id) => {
+        <>
+          <div className={styles.image_block}></div>
+          <div className={styles.caption_block}>
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+          </div>
+        </>;
+      })}
     </div>
   );
 };

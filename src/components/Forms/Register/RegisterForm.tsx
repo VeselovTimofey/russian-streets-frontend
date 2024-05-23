@@ -1,17 +1,7 @@
 import { useId } from 'react';
 import { useForm } from 'react-hook-form';
 import styles from '../styles.module.scss';
-
-type FormData = {
-  firstName: string;
-  lastName: string;
-  phone: string;
-  email: string;
-  password: string;
-  doublePassword: string;
-  mailing: boolean;
-  agreement: boolean;
-};
+import { IUser } from '../../../utils/types';
 
 const RegisterForm = () => {
   const id: string = useId();
@@ -20,9 +10,9 @@ const RegisterForm = () => {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<FormData>({ mode: 'onBlur' });
+  } = useForm<IUser>({ mode: 'onBlur' });
 
-  const onSubmit = (data: FormData) => console.log(data);
+  const onSubmit = (data: IUser) => console.log(data);
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
@@ -82,8 +72,7 @@ const RegisterForm = () => {
       <input
         {...register('email', {
           required: 'Это поле обязательно для заполнения!',
-          pattern:
-            /^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/,
+          pattern: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
         })}
         type='email'
         required
