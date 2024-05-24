@@ -361,18 +361,6 @@ template {
   justify-content: center;
   align-items: center;
 }
-.page h1 {
-  font-size: 100px;
-  line-height: auto;
-}
-.page h2 {
-  font-size: 48px;
-  line-height: 44px;
-}
-.page h3 {
-  font-size: 34px;
-  line-height: 40px;
-}
 
 .title-font {
   font-family: "Benzin", "Bahnschrift", sans-serif;
@@ -382,6 +370,18 @@ template {
 }
 .title-font_regular {
   font-weight: 400;
+}
+.title-font h1 {
+  font-size: 100px;
+  line-height: auto;
+}
+.title-font h2 {
+  font-size: 48px;
+  line-height: 44px;
+}
+.title-font h3 {
+  font-size: 34px;
+  line-height: 40px;
 }
 
 .subtitle-font {
@@ -584,6 +584,33 @@ template {
 .popup__search-input::placeholder {
   color: #FFFFFF;
   text-align: right;
+}
+.popup__location {
+  height: 156px;
+  width: 400px;
+  position: absolute;
+  top: calc(50vh - 78px);
+  left: calc(50vw - 200px);
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  display: grid;
+  grid-template: 48px 36px auto/312px auto;
+  gap: 8px;
+  place-items: start start;
+}
+.popup__location-title {
+  padding-left: 24px;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  align-self: end;
+}
+.popup__location-text {
+  padding-left: 24px;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}
+.popup__location-button_direction_right {
+  justify-self: end;
 }
 
 /*# sourceMappingURL=index.css.map */

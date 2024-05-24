@@ -14,6 +14,21 @@ $font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
   font-family: $font-stack-Benzin;
 
   @include text-weight;
+
+  h1 {
+    font-size: 100px;
+    line-height: auto;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 44px;
+  }
+
+  h3 {
+    font-size: 34px;
+    line-height: 40px;
+  }
 }
 
 .subtitle-font {
