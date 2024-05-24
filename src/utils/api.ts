@@ -1,3 +1,5 @@
+import { IUser } from "./types";
+
 // универсальные шапка
 type universalType = {
   method?: 'GET' | 'POST' | 'PATCH' | 'PUT' | 'DELETE';
@@ -32,7 +34,7 @@ export const getDisciplins = () =>
     },
   })
 
-export const getRegistrationUser = (data: TUser) =>
+export const getRegistrationUser = (data: IUser) =>
   universalRequestType(`${api}/auth/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },

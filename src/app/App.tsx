@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router';
+import { Provider } from 'react-redux';
 import RegisterForm from '../components/Forms/Register/registerForm';
 import RegistrationPage from '../pages/Registration/RegistrationPage';
 import { BrowserRouter } from 'react-router-dom';
@@ -6,7 +7,7 @@ import Disciplines from '../pages/Disciplines/Disciplines';
 
 const App = () => {
   return (
-    <>
+    <Provider store={store}>
       <BrowserRouter>
         <Routes>
           <Route path='/dis' Component={Disciplines} />
@@ -16,7 +17,7 @@ const App = () => {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </Provider>
   );
 };
 

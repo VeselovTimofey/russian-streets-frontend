@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 
-const Contents = ({ data }: propsType[]) => {
+const Contents = ({ data }) => {
   return (
     <div className={styles.section}>
       {data.map((item, id) => {
