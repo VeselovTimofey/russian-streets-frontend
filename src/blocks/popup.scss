@@ -15,11 +15,11 @@
     z-index: 1;
   }
 
-  &__background_black {
+  &_background_black {
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  &__background_grey {
+  &_background_grey {
     background-color: rgba(0, 0, 0, 0.2);
   }
 
@@ -33,7 +33,7 @@
     z-index: 2;
   }
 
-  &__menu_list {
+  &__menu-list {
     //margin: 20px;
     display: flex;
     flex-direction: column;
@@ -45,8 +45,6 @@
     width: 100vw;
     position: sticky;
     top: 172px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -95,7 +93,9 @@
     grid-row: 2 / 3;
   }
 
-  &__location-button_direction_right {
-    justify-self: end;
+  &__location-button {
+    &_direction_right {
+      justify-self: end;
+    }
   }
 }

@@ -459,7 +459,6 @@ template {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 .form__input {
   width: 306px;
@@ -542,10 +541,10 @@ template {
   top: 0;
   z-index: 1;
 }
-.popup__background_black {
+.popup_background_black {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.popup__background_grey {
+.popup_background_grey {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .popup__menu {
@@ -557,7 +556,7 @@ template {
   background-color: #222222;
   z-index: 2;
 }
-.popup__menu_list {
+.popup__menu-list {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -567,8 +566,6 @@ template {
   width: 100vw;
   position: sticky;
   top: 172px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 .popup__search-input {

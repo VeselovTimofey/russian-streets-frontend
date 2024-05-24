@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 
-import ButtonWithImage from './ButtonWithImage.tsx';
+import ButtonWithImage from './elements/ButtonWithImage.tsx';
+import Input from './elements/Input.tsx';
+
+import { BUTTON_CLASS } from '../utils/constans/constans.tsx';
 
 import logoPath from '../images/svg/logo.svg';
 import locationPath from '../images/svg/location.svg';
@@ -35,20 +38,17 @@ function Header(props: HeaderProps) {
         </ul>
       </nav>
       <ul className="header__menu">
-        <li><button className="button button_size_small text-font text-font_bold text-font_size_medium">Поддержать организацию</button></li>
+        <li><button className={BUTTON_CLASS.button_size_small}>Поддержать организацию</button></li>
         <li><ButtonWithImage image={buttonSearch} onClick={props.handleOpenPopupSearch} /></li>
         <li><ButtonWithImage image={buttonAccount} onClick={() => {console.log('Функция в разработке.');}} /></li>
         <li><ButtonWithImage image={menu} onClick={props.handleOpenPopupMenu}/></li>
       </ul>
-      <section className={'popup popup__background_grey' + isOpenSearch} onClick={props.handleClosePopup}>
-        <label className="popup__search-element" htmlFor="header-search">
-          <input className="popup__search-input text-font text-font_regular text-font_size_medium" type="text" name="header-search" id="header-search" placeholder="Искать &#128269;" />
-          <div className="text-font text-font_regular text-font_size_tiny form__input-error"></div>
-        </label>
+      <section className={'popup popup_background_grey' + isOpenSearch} onClick={props.handleClosePopup}>
+        <Input id="header-search" placeholder="Искать &#128269;" type="text" title="" />
       </section>
-      <section className={'popup popup__background_black' + isOpenMenu} onClick={props.handleClosePopup}>
+      <section className={'popup popup_background_black' + isOpenMenu} onClick={props.handleClosePopup}>
         <nav className="popup__menu">
-          <ul className="popup__menu_list">
+          <ul className="popup__menu-list">
             <li><Link className="header__link subtitle-font subtitle-font_regular" to="/">Представительства</Link></li>
             <li><Link className="header__link subtitle-font subtitle-font_regular" to="/">Наши участники</Link></li>
             <li><Link className="header__link subtitle-font subtitle-font_regular" to="/">О нас</Link></li>
@@ -61,12 +61,12 @@ function Header(props: HeaderProps) {
           </ul>
         </nav>
       </section>
-      <section className={'popup popup__background_black' + isOpenLocation} onClick={props.handleClosePopup}>
+      <section className={'popup popup_background_black' + isOpenLocation} onClick={props.handleClosePopup}>
         <div className="popup__location">
           <h1 className="popup__location-title text-font text-font_regular text-font_size_big">Местоположение</h1>
           <p className="popup__location-text text-font text-font_regular text-font_size_medium">Твоя геолокация Москва?</p>
-          <button className="popup__location-button_direction_right button button_hollow button_size_small text-font text-font_bold text-font_size_medium">Изменить</button>
-          <button className="button button_size_small text-font text-font_bold text-font_size_medium">Да</button>
+          <button className={BUTTON_CLASS.button_hollow_size_small + ' popup__location-button popup__location-button_direction_right'}>Изменить</button>
+          <button className={BUTTON_CLASS.button_size_small}>Да</button>
         </div>
       </section>
     </header>
