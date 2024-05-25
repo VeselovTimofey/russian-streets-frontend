@@ -15,17 +15,17 @@ $font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
 
   @include text-weight;
 
-  h1 {
-    font-size: 100px;
-    line-height: auto;
+  &_size_big {
+    font-size: 96px;
+    line-height: 90px;
   }
 
-  h2 {
+  &_size_medium {
     font-size: 48px;
     line-height: 44px;
   }
 
-  h3 {
+  &_size_small {
     font-size: 34px;
     line-height: 40px;
   }
@@ -49,6 +49,11 @@ $font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
   font-family: 'Bahnschrift', 'Arial', sans-serif;
   
   @include text-weight;
+
+  &_size_very-big {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
 
   &_size_big {
     font-size: 16px;

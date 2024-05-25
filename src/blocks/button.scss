@@ -36,5 +36,8 @@
   &_size_medium {
     height: 68px;
     width: 304px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

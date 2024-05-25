@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from './Header.tsx';
+import Main from './Main.tsx';
 
 function App() {
   const [popupMenu, setPopupMenu] = React.useState(false);
@@ -28,15 +29,18 @@ function App() {
   }
 
   return (
-    <Header 
-      isOpenPopupMenu={popupMenu}
-      isOpenPopupSearch={popupSearch}
-      isOpenPopupLocation={popupLocation}
-      handleOpenPopupMenu={openPopupMenu}
-      handleOpenPopupSearch={openPopupSearch}
-      handleOpenPopupLocation={openPopupLocation}
-      handleClosePopup={closePopup}
-    />
+    <>
+      <Header 
+        isOpenPopupMenu={popupMenu}
+        isOpenPopupSearch={popupSearch}
+        isOpenPopupLocation={popupLocation}
+        handleOpenPopupMenu={openPopupMenu}
+        handleOpenPopupSearch={openPopupSearch}
+        handleOpenPopupLocation={openPopupLocation}
+        handleClosePopup={closePopup}
+      />
+      <Main />
+    </>
   );
 }
 
