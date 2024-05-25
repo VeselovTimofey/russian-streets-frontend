@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
-import { BUTTON_CLASS } from '../utils/constans/constans.tsx';
+import { BUTTON_CLASS } from '../utils/constans/button-constans.tsx';
 
 function Intro() {
   return (
-    <section className="section section_size_full intro">
+    <section className="section section_flex-column intro">
       <iframe 
         className="intro__video"
         src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=yzZj7pbZe9M29_Lc&amp;controls=0&autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ" 
