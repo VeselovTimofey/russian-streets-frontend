@@ -1,0 +1,17 @@
+.our-purpose {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  gap: 16px 22px;
+  
+  &__image {
+    height: 331px;
+    width: 734px;
+    grid-row: 1/3;
+  }
+
+  &__title {
+    align-self: end;
+  }
+}

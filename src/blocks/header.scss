@@ -9,6 +9,12 @@
   background-color: #222222;
   z-index: 3;
 
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__logo {}
 
   &__nav {

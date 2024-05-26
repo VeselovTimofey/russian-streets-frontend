@@ -348,6 +348,7 @@ template {
 .page {
   max-width: 1440px;
   overflow-x: scroll;
+  margin: 0 auto;
 }
 .page h1, .page h2, .page h3, .page h4, .page h5, .page h6, .page p {
   margin: 0;
@@ -355,11 +356,6 @@ template {
 .page ul {
   margin: 0;
   padding: 0;
-}
-.page li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .title-font {
@@ -408,6 +404,10 @@ template {
 .text-font_size_very-big {
   font-size: 24px;
   line-height: 28.8px;
+}
+.text-font_size_large {
+  font-size: 18px;
+  line-height: 24px;
 }
 .text-font_size_big {
   font-size: 16px;
@@ -514,6 +514,11 @@ template {
   align-items: center;
   background-color: #222222;
   z-index: 3;
+}
+.header li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header__nav-menu {
   display: flex;
@@ -632,7 +637,7 @@ template {
 .intro {
   height: 600px;
   width: 100%;
-  padding: 5.5%;
+  padding: 0 5.5%;
   position: relative;
   overflow: hidden;
   justify-content: center;
@@ -726,6 +731,80 @@ template {
 }
 .member-card__description {
   margin-top: 12px;
+}
+
+.about-us {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.about-us__title {
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+.about-us__concept {
+  text-align: center;
+}
+.about-us__borderline {
+  width: 100%;
+  border-bottom: 1px solid #222222;
+}
+
+.our-purpose {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  gap: 16px 22px;
+}
+.our-purpose__image {
+  height: 331px;
+  width: 734px;
+  grid-row: 1/3;
+}
+.our-purpose__title {
+  align-self: end;
+}
+
+.our-values-mission {
+  height: 372px;
+  width: 100%;
+  padding: 0 5.5%;
+  background-color: #DDE0E4;
+  display: flex;
+  align-items: center;
+}
+
+.our-values {
+  margin: 40px 0 36px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.our-values li {
+  display: flex;
+  justify-content: flex-start;
+}
+.our-values__title {
+  text-align: start;
+}
+.our-values__list {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  gap: 10px;
+}
+
+.our-mission {
+  height: 216px;
+  width: 51vw;
+  margin-left: auto;
+  justify-content: center;
+  gap: 12px;
+  padding-left: 40px;
+  background-color: #FFFFFF;
 }
 
 /*# sourceMappingURL=index.css.map */
