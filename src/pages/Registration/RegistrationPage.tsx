@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
 import { Outlet } from 'react-router-dom';
 import CustomLink from '../../components/CastomLink/CustomLink';
-import RegisterForm from '../../components/Forms/Register/registerForm';
+import RegisterForm from '../../components/Forms/Register/RegisterForm';
 
 const RegistrationPage = () => {
   return (

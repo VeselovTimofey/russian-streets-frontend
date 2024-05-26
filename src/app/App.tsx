@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router';
 import { Provider } from 'react-redux';
-import RegisterForm from '../components/Forms/Register/registerForm';
+import RegisterForm from '../components/Forms/Register/RegisterForm';
 import RegistrationPage from '../pages/Registration/RegistrationPage';
 import { BrowserRouter } from 'react-router-dom';
 import Disciplines from '../pages/Disciplines/Disciplines';
