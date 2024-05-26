@@ -12,6 +12,7 @@ const RegisterForm = () => {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm<IUser>({ mode: 'onBlur' });
 
@@ -19,6 +20,7 @@ const RegisterForm = () => {
     console.log(data);
     const user = data;
     dispatch(addUserS(user));
+    reset();
   };
 
   return (
@@ -27,7 +29,7 @@ const RegisterForm = () => {
       <input
         {...register('firstName', {
           required: 'Это поле обязательно для заполнения!',
-          pattern: /^[A-Za-z]+$/i,
+          pattern: /^[A-Za-z а-яё]+$/i,
         })}
         type='text'
       />
@@ -44,7 +46,7 @@ const RegisterForm = () => {
       <input
         {...register('lastName', {
           required: 'Это поле обязательно для заполнения!',
-          pattern: /^[A-Za-z]+$/i,
+          pattern: /^[A-Za-zА-Яа-яЁё\s]/i,
         })}
         type='text'
       />
@@ -148,7 +150,9 @@ const RegisterForm = () => {
         </label>
         <label className={styles.label_checkbox}>
           <input
-            {...register('agreement', { required: true })}
+            {...register('agreement', {
+              required: 'Это поле обязательно для заполнения!',
+            })}
             type='checkbox'
           />
 
@@ -157,6 +161,15 @@ const RegisterForm = () => {
             <a> обработку моих персональных данных</a>
           </p>
         </label>
+        {errors.agreement && (
+          <p
+            id={`${id}-firstName-error-message`}
+            aria-live='assertive'
+            className={styles.errors}
+          >
+            {errors?.agreement?.message || 'Error!'}
+          </p>
+        )}
       </div>
 
       <input type='submit' />
