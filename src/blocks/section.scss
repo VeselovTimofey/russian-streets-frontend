@@ -1,8 +1,14 @@
 .section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 26px;
-  margin-left: 150px;
-  margin-bottom: 50px;
+
+  &_flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &_grid-column {
+    display: grid;
+    justify-content: space-between;
+    align-content: space-between;
+  }
 }
