@@ -1,0 +1,26 @@
+{
+  "user1": {
+    "imageurl": "https://s3-alpha-sig.figma.com/img/33b4/39dc/4c26ae0d728c67b0420b5d0c58e7fae5?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XvMlR-ubN~0fYxOZJSE1kQ-VPjZqtu6m7ZvatPxuSY05Jq~ixRwbqfvmfgWVSAp70qwiRKTo2pDkVOkbL955cbfYPetXuLkl4syGX19cgzjlxsAjP4rBgBiXuaxq9padTYZUuPv-QXDfDziJ7Qr3Sq4tx9XIHp6pfl-AUewjtWElU1iMVgFRmGiaPB3F7d-KACm3mPi3IzHB3POmAs4wXSp6wQo0IAxkJ9BU9PwYZT6wU5H~xpJ7m4qc0~0lVrQ3Yu7mk1CasJZnQnf8tsf0mhh7hIZ17UFs-T8ro73N1-fIEnJxH0SiOr6oyTvh0YxzkTdCUM5NF6QAx5ptdS1ZBg__",
+    "profession": "Общественный деятель",
+    "name": "Алексей",
+    "description": "“Танцы под ритмы хип-хопа вместе с такими талантливыми людьми — это совершённая мечта. Это было моё первое выступление и меня переполняют эмоции.”"
+  },
+  "user2": {
+    "imageurl": "https://s3-alpha-sig.figma.com/img/4f85/124a/8555211e3fa609a51949373340a8ac20?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W5Jhfb~t-hWfSpY-4imB-K6V88zGvZoSEiU-xPAV-BEnR0W5EKOiALB8yqDEKD2kC3wE1khiJ1SNEVNZdcatYkMOA7dOkPKfWvhGnWSPnlaIiTNusLHkf-Ohu2o-mRXayiSR~-2-BTUwqezwlNyalw4IKNNiMSWFwACarLiaQ8vv-k4EizcOX2O3w17riAnsAjmQr6X755~Taq4zXPubyUDXowwcPIuGwSBcvhaQL8PX4itc5BeYhhLqltEvDDzYi1u84yFQ5YboyzoSodMV7u5wc9H0fbomWiNJdc5RDcGgMCbR2vU7~1pQFpY866oNsaDZmqOrzF8raAuwnN-rMA__",
+    "profession": "Волонтер",
+    "name": "Лена",
+    "description": "“Уличное искусство стало не просто моим хобби, а способом выражения самой я. В каждой краске, каждой линии рисунка я оставляю частичку своей души и открываю для себя мир новых возможностей.”"
+  },
+  "user3": {
+    "imageurl": "https://s3-alpha-sig.figma.com/img/e1d1/2d82/0f7b3b1a54dcb5c26a4106252e9bd17b?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ExVScK98f6xoRF4VDo-uSv9T5vNEKoxi3Zy4GSbLM02weucu5nkyaRWt-xvCVa05EXG6~zizgr0CP4BZS~JNasYjVib-c7DDHR2AMWcdAqh1FsbJEOaclHVNlSGYLTzLkVvvw5yVG3R2JdsU0dgpR8GMHqQwWP8M-NPc2JGeUkyABsqT3vvNhB72DbVVpPNkn2rruhrHytuavhDDwQiMsWJroyeYJ0lz7zZZ3ihRU8dcgvVKSKaslxwlhBElxZfPH3Kwo32GvPHBjh4scaQPz1h66IlxDn-KrvlpQTqi2CAqS2G0h7SE-zuStQOYs3Wkwhj6grXKYU1FJWjwmnvHwA__",
+    "profession": "Учитель",
+    "name": "Мария",
+    "description": "“Участие в мире стрит-арта в 48 лет - это увлекательное приключение, которое перевернуло мое представление об искусстве и самовыражении. “"
+  },
+  "user4": {
+    "imageurl": "https://s3-alpha-sig.figma.com/img/daf0/ee35/89f4dee090952e29de7789bf776c4943?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MYjcI03K8evulpLHJ9XPuPE8UXcBWChreYmNKc8aRYMV~qrlC0sP7COZTfrxhrj1t9yXd8QSvMSQUw4K4xGbY9bYCYlBeDr4hc-krURs~Kq~hUzMfUQRwV~2hLkeRYE8Pi0lUKzeG09WKQAqrVccBThMoL2XgMuPy1qVHSN8VUlN5nigaQiPuPQbdgKsuBf0AfbtxVPMCRfOqVCGLwQVWHNWdgMnpI7y2riVaqb-e-jE~OCTmct7StEVKtrfio3wtyR-3DtZGBltVJ9bFwGggCkC2FysK~MfLBJQBAVEV7xdXFAQii7Zw2737bTa~HNLoWvMkau8uIwT-j4UxIa2BQ__",
+    "profession": "Студент",
+    "name": "Стас",
+    "description": "“Паркур открыл передо мной адреналином наполненное путешествие самопознания. Ответственность, высота, плавные движения - это как поэзия в движении.”"
+  }
+}
