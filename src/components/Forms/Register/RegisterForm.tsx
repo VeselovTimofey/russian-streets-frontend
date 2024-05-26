@@ -1,9 +1,12 @@
 import { useId } from 'react';
 import { useForm } from 'react-hook-form';
 import styles from '../styles.module.scss';
-import { IUser } from '../../../utils/types';
+import { IUser } from '../../../service/types';
+import { useDispatch } from 'react-redux';
+import { addUserS } from '../../../service/slice/userSlice';
 
 const RegisterForm = () => {
+  const dispatch = useDispatch();
   const id: string = useId();
   const {
     register,
@@ -12,7 +15,11 @@ const RegisterForm = () => {
     formState: { errors },
   } = useForm<IUser>({ mode: 'onBlur' });
 
-  const onSubmit = (data: IUser) => console.log(data);
+  const onSubmit = (data: IUser) => {
+    console.log(data);
+    const user = data;
+    dispatch(addUserS(user));
+  };
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
@@ -111,8 +118,8 @@ const RegisterForm = () => {
       <input
         {...register('doublePassword', {
           required: 'Это поле обязательно для заполнения!',
-          validate: (val: string) => {
-            if (watch('password') != val) {
+          validate: (value?: string) => {
+            if (watch('password') != value) {
               return 'Пароли не совпадают!';
             }
           },

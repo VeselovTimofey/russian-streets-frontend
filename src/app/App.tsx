@@ -4,6 +4,7 @@ import RegisterForm from '../components/Forms/Register/registerForm';
 import RegistrationPage from '../pages/Registration/RegistrationPage';
 import { BrowserRouter } from 'react-router-dom';
 import Disciplines from '../pages/Disciplines/Disciplines';
+import { store } from '../service/store';
 
 const App = () => {
   return (
