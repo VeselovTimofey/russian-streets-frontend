@@ -4,8 +4,6 @@ import { IUser } from "../../utils/types";
 import { useAppDispatch } from "../hooks/hooks";
 import { addUserSuccess, addUserError } from "../slice/userSlice";
 
-
-
 // регистрация
 export const regUser = async (data: IUser) => {
   const dispatch = useAppDispatch()

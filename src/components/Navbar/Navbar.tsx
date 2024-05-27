@@ -1,6 +1,5 @@
 import { ReactElement } from 'react';
 import { TdisciplinesButtons } from '../../utils/types';
-import CustomLink from './CastomLink';
 import styles from './styles.module.scss';
 import { findDiscipline } from '../../service/actions/disciplineAction';
 import { disciplines } from '../../utils/constans';
