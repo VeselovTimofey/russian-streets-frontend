@@ -1,5 +1,4 @@
 import { getDiscipline } from "../../utils/api"
-import { IDiscipline } from "../../utils/types";
 import { useAppDispatch } from "../hooks/hooks";
 import { disciplineFetching, disciplineFetchingError, disciplineFetchingSuccess } from "../slice/disciplineSlice"
 //import { AppDispatch } from "../types"

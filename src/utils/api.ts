@@ -1,4 +1,4 @@
-import { IDiscipline, IUser } from "./types";
+import { IUser } from "./types";
 
 // универсальные шапка
 type universalType = {

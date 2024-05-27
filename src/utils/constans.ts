@@ -14,3 +14,5 @@ export const disciplines: TdisciplinesButtons[] =
     { name: 'BMX', to: '/bmx' },
     { name: 'Scoot', to: '/scoot' },
   ]
+
+export const ADD_USER = 'ADD_USER'
