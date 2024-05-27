@@ -1,0 +1,11 @@
+.call-for-registration {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  border: 2px solid #222222;
+
+  &__button {
+    margin-top: 32px;
+  }
+}
