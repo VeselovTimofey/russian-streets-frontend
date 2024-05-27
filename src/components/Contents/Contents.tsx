@@ -1,6 +1,5 @@
-import styles from './styles.module.scss';
-import { IDiscipline } from '../../utils/types';
 import { useAppSelector } from '../../service/hooks/hooks';
+import styles from './styles.module.scss';
 
 const data = {
   images_url:
@@ -8,10 +7,11 @@ const data = {
   name: 'zxc',
   description: 'gala plrgmkolp mhgbdpokg',
 };
-const { name, description, images_url } = useAppSelector(
-  (state) => state.discipline.discipline
-);
+
 const Contents = () => {
+  const { name, description, images_url } = useAppSelector(
+    (state) => state.discipline.discipline
+  );
   return (
     <div className={styles.section}>
       <>

@@ -7,7 +7,6 @@ import { disciplines } from '../../utils/constans';
 
 const Navbar = () => {
   const handleClick = (name: string) => {
-    console.log(name);
     findDiscipline(name);
   };
 
