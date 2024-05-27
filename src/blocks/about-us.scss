@@ -6,11 +6,12 @@
   gap: 40px;
 
   &__title {
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
     align-self: flex-start;
   }
 
   &__concept {
+    margin: 0;
     text-align: center;
   }
 

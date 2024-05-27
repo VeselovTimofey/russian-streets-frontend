@@ -4,6 +4,10 @@
   grid-template-rows: repeat(2, auto);
   justify-content: center;
   gap: 16px 22px;
+
+  p {
+    margin: 0;
+  }
   
   &__image {
     height: 331px;
@@ -12,6 +16,7 @@
   }
 
   &__title {
+    margin: 0;
     align-self: end;
   }
 }

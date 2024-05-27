@@ -1,0 +1,30 @@
+.our-offers {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  gap: 16px 20px;
+
+  ul {
+    padding-left: 15px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  h1, p {
+    margin: 0;
+  }
+
+  &__list {
+    list-style-type: square;
+  }
+
+  &__image {
+    height: 450px;
+    width: 736px;
+    grid-row: 1/3;
+    border: 2x solid #222222;
+  }
+}
