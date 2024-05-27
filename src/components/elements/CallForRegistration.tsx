@@ -2,7 +2,7 @@ import { BUTTON_CLASS } from '../../utils/constans/button-constans.tsx';
 
 function CallForRegistration() {
   return (
-    <section className="call-for-registration">
+    <section className="call-for-registration our-possibilities__element">
       <p className="title-font title-font_regular title-font_size_small">Развивайся с нами</p>
       <p className="title-font title-font_regular title-font_size_small">Будь в тренде</p>
       <p className="title-font title-font_regular title-font_size_small">Используй все возможности</p>

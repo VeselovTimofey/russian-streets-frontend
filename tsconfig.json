@@ -22,7 +22,7 @@
   },
   "include": [
     "src/components",
-    "src/utils/types/images.d.ts",
+    "src/utils/types/images.d.ts", "src/pages/Main.tsx",
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

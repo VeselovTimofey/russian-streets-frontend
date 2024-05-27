@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Header from './Header.tsx';
-import Main from './Main.tsx';
+import Header from './components/Header.tsx';
+import Main from './pages/Main.tsx';
 
 function App() {
   const [popupMenu, setPopupMenu] = React.useState(false);
