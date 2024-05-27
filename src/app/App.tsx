@@ -12,7 +12,7 @@ const App = () => {
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path='/dis' Component={Disciplines} />
+          <Route path='/dis' Component={Disciplines}></Route>
           <Route path='/' Component={RegistrationPage}>
             <Route path='/' element={<RegisterForm />} />
             {/*<Route path='/organization' element={<RegisterForm />} />*/}

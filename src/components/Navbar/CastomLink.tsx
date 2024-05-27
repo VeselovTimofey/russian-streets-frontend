@@ -16,7 +16,7 @@ const CustomLink: FC<PropsType> = ({ children, to, onclick, ...props }) => {
       onClick={onclick}
       {...props}
       style={{
-        color: match ? 'white' : '#8585AD',
+        color: match ? 'red' : '#222222',
       }}
     >
       {children}

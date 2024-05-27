@@ -7,6 +7,7 @@ import { disciplines } from '../../utils/constans';
 
 const Navbar = () => {
   const handleClick = (name: string) => {
+    console.log(name);
     findDiscipline(name);
   };
 
@@ -15,10 +16,12 @@ const Navbar = () => {
       <ul>
         {disciplines.map((item: TdisciplinesButtons): ReactElement => {
           return (
-            <li className={styles.item} key={item.name}>
-              <CustomLink to='{item.to}' onclick={handleClick(item.name)}>
-                {item.name}
-              </CustomLink>
+            <li
+              className={styles.item}
+              key={item.name}
+              onClick={() => handleClick(item.name)}
+            >
+              {item.name}
             </li>
           );
         })}

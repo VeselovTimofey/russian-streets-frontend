@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import styles from './styles.module.scss';
 import { IDiscipline } from '../../utils/types';
+import { useAppSelector } from '../../service/hooks/hooks';
 
 const data = {
   images_url:
@@ -8,17 +8,19 @@ const data = {
   name: 'zxc',
   description: 'gala plrgmkolp mhgbdpokg',
 };
-
+const { name, description, images_url } = useAppSelector(
+  (state) => state.discipline.discipline
+);
 const Contents = () => {
   return (
     <div className={styles.section}>
       <>
         <div className={styles.image_block}>
-          <img src={data.images_url} alt={data.name} />
+          <img src={images_url[0]} alt={name} />
         </div>
         <div className={styles.caption_block}>
-          <h2>{data.name}</h2>
-          <p>{data.description}</p>
+          <h2>{name}</h2>
+          <p>{description}</p>
         </div>
       </>
       ;
