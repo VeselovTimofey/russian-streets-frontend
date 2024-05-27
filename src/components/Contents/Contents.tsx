@@ -7,16 +7,13 @@ const Contents = () => {
   );
   return (
     <div className={styles.section}>
-      <>
-        <div className={styles.image_block}>
-          <img src={images_url[0]} alt={name} />
-        </div>
-        <div className={styles.caption_block}>
-          <h2>{name}</h2>
-          <p>{description}</p>
-        </div>
-      </>
-      ;
+      <div className={styles.image_block}>
+        <img src={images_url[0]} alt={name} />
+      </div>
+      <div className={styles.caption_block}>
+        <h2>{name}</h2>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };
