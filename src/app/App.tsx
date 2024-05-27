@@ -4,8 +4,9 @@ import RegisterForm from '../components/Forms/Register/RegisterForm';
 import RegistrationPage from '../pages/Registration/RegistrationPage';
 import { BrowserRouter } from 'react-router-dom';
 import Disciplines from '../pages/Disciplines/Disciplines';
-import { store } from '../service/store';
+import { setupStore } from '../service/store';
 
+const store = setupStore();
 const App = () => {
   return (
     <Provider store={store}>

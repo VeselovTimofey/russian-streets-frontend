@@ -1,12 +1,10 @@
 import { useId } from 'react';
 import { useForm } from 'react-hook-form';
 import styles from '../styles.module.scss';
-import { IUser } from '../../../service/types';
-import { useDispatch } from 'react-redux';
-import { addUserS } from '../../../service/slice/userSlice';
+import { IUser } from '../../../utils/types';
+import { regUser } from '../../../service/actions/userActions';
 
 const RegisterForm = () => {
-  const dispatch = useDispatch();
   const id: string = useId();
   const {
     register,
@@ -17,9 +15,7 @@ const RegisterForm = () => {
   } = useForm<IUser>({ mode: 'onBlur' });
 
   const onSubmit = (data: IUser) => {
-    console.log(data);
-    const user = data;
-    dispatch(addUserS(user));
+    regUser(data);
     reset();
   };
 
@@ -81,7 +77,7 @@ const RegisterForm = () => {
       <input
         {...register('email', {
           required: 'Это поле обязательно для заполнения!',
-          pattern: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+          pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
         })}
         type='email'
         required
@@ -104,6 +100,7 @@ const RegisterForm = () => {
             value: 8,
             message: 'Пароль не должен быть менее 8 символов!',
           },
+          pattern: /^[a-zA-Z0-9!@#$%^&*()_+{}[\]:;<>,.?~\\/-]{8,}$/,
         })}
         type='password'
       />

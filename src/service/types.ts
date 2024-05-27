@@ -1,22 +1,6 @@
-import { ADD_USER } from "./constans"
+import { rootReducer } from "./slice/root";
+import { setupStore } from "./store";
 
-export type TAddUserAction = {
-  type: typeof ADD_USER;
-  user: IUser
-}
-
-export type TUserState = {
-  user: IUser
-  auth: boolean
-}
-
-export interface IUser {
-  firstName: string
-  lastName: string
-  phone?: string
-  email: string
-  password?: string
-  doublePassword?: string
-  mailing: boolean
-  agreement?: boolean
-}
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>
+export type AppDispatch = AppStore['dispatch'];

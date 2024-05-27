@@ -1,7 +1,6 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Contents from '../../components/Contents/Contents';
 import styles from './styles.module.scss';
-import { Outlet } from 'react-router';
 
 const Disciplines = () => {
   return (
@@ -12,7 +11,7 @@ const Disciplines = () => {
           <Navbar />
         </div>
         <div className={styles.wrapper_content}>
-         <Contents/>
+          <Contents />
         </div>
       </div>
     </section>

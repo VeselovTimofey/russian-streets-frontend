@@ -1,4 +1,4 @@
-import { IUser } from "./types";
+import { IDiscipline, IUser } from "./types";
 
 // универсальные шапка
 type universalType = {
@@ -24,16 +24,19 @@ export const checkResponse = (res: Response) => {
   return res.ok ? res.json() : res.json().then((err) => Promise.reject(err));
 };
 
-const api = 'http://localhost:5173/dis'
+const api = 'http://localhost:3001'
 
-export const getDisciplins = () =>
-  universalRequestType(`${api}/dis`, {
+//content
+
+export const getDiscipline = (name: string) =>
+  universalRequestType(`${api}/dis/id`, {
     method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(name)
   })
 
+
+// user
 export const getRegistrationUser = (data: IUser) =>
   universalRequestType(`${api}/auth/register`, {
     method: "POST",
@@ -48,3 +51,6 @@ export const getRegistrationUser = (data: IUser) =>
       agreement: data.agreement
     }),
   })
+
+
+
