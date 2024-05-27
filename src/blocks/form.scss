@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    width: 306px;
+    height: 38px;
+    padding-left: 12px;
+    border: 1px solid #797981;
+    border-radius: 4px;
+
+    &:disabled {
+      border-color: #DDE0E4;
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid #1E5B9C;
+    }
+    
+    &:invalid {
+      border: 1px solid #FF0200;
+    }
+  }
+
+  &__input-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__input-error {
+    color: #FF0200;
+  }
+}

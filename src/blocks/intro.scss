@@ -1,0 +1,30 @@
+.intro {
+  height: 600px;
+  width: 100%;
+  padding: 5.5%;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  gap: 24px;
+
+
+  &__video {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 0;
+    transform: scaleX(1.75);
+    z-index: -1;
+  }
+
+  &__title {
+    width: 59%;
+    color: #FFFFFF;
+  }
+
+  &__button {
+    text-decoration: none;
+  }
+}
