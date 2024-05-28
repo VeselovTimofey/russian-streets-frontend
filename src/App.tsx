@@ -1,10 +1,11 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 
 import Header from './components/Header.tsx';
 import Main from './pages/Main.tsx';
 import NotFound from './pages/NotFound.tsx';
 import Footer from './components/Footer.tsx';
+import RegistrationPage from './pages/Registration/RegistrationPage.tsx';
 
 function App() {
   const [popupMenu, setPopupMenu] = React.useState(false);
@@ -33,7 +34,7 @@ function App() {
 
   return (
     <>
-      <Header 
+      <Header
         isOpenPopupMenu={popupMenu}
         isOpenPopupSearch={popupSearch}
         isOpenPopupLocation={popupLocation}
@@ -43,9 +44,10 @@ function App() {
         handleClosePopup={closePopup}
       />
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/russian-streets-frontend/" element={<Main />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path='/' element={<Main />} />
+        <Route path='/russian-streets-frontend/' element={<Main />} />
+        <Route path='/reg' element={<RegistrationPage />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
     </>

@@ -6,28 +6,21 @@ import OurOffers from '../components/OurOffers.tsx';
 import OurPossibilities from '../components/OurPossibilities.tsx';
 import UpcomingEvents from '../components/UpcomingEvents.tsx';
 import LastNews from '../components/LastNews.tsx';
-import Disciplines from './Disciplines/Disciplines';
-import { Provider } from 'react-redux';
-import { setupStore } from '../service/store.ts';
-
-const store = setupStore();
+import Disciplines from '../pages/Disciplines/Disciplines.tsx';
 
 function Main() {
   return (
-    <Provider store={store}>
-      {' '}
-      <main className='main'>
-        <Intro />
-        <Agency />
-        <Disciplines />
-        <Members />
-        <AboutUs />
-        <OurOffers />
-        <OurPossibilities />
-        <UpcomingEvents />
-        <LastNews isSixNews={true} />
-      </main>
-    </Provider>
+    <main className='main'>
+      <Intro />
+      <Agency />
+      <Disciplines />
+      <Members />
+      <AboutUs />
+      <OurOffers />
+      <OurPossibilities />
+      <UpcomingEvents />
+      <LastNews isSixNews={true} />
+    </main>
   );
 }
 

@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
 import { Outlet } from 'react-router-dom';
-import CustomLink from '../../components/CastomLink/CustomLink';
-import RegisterForm from '../../components/Forms/Register/RegisterForm';
+import RegisterForm from '../../components/elements/Forms/Register/RegisterForm';
+import React from 'react';
 
 const RegistrationPage = () => {
   return (
@@ -9,11 +9,6 @@ const RegistrationPage = () => {
       <div className={styles.left_block}>
         <div className={styles.form}>
           <h1>Присоединяйся к движению прямо сейчас</h1>
-          {/*<nav className={styles.nav}>
-            <CustomLink to={'reg'}>Участник</CustomLink>
-            <CustomLink to={'org'}>Организация</CustomLink>
-          </nav>*/}
-          {/*<Outlet />*/}
           <RegisterForm />
         </div>
       </div>

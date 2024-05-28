@@ -1,7 +1,6 @@
-import Navbar from '../../components/Navbar/Navbar';
-import Contents from '../../components/Contents/Contents';
+import Navbar from '../../components/elements/Navbar/Navbar';
+import Contents from '../../components/elements/Contents/Container';
 import styles from './styles.module.scss';
-import React from 'react';
 
 const Disciplines = () => {
   return (

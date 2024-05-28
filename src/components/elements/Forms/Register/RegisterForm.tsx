@@ -1,8 +1,9 @@
 import { useId } from 'react';
 import { useForm } from 'react-hook-form';
 import styles from '../styles.module.scss';
-import { IUser } from '../../../service/utils/types';
-import { regUser } from '../../../service/actions/userActions';
+import { IUser } from '../../../../service/utils/types';
+import { regUser } from '../../../../service/actions/userActions';
+import { BUTTON_CLASS } from '../../../../utils/constans/button-constans';
 
 const RegisterForm = () => {
   const id: string = useId();
@@ -55,7 +56,6 @@ const RegisterForm = () => {
           {errors?.lastName?.message || 'Error!'}
         </p>
       )}
-
       <label>Номер телефона</label>
       <input
         {...register('phone', {
@@ -72,7 +72,6 @@ const RegisterForm = () => {
           {errors?.phone?.message || 'Error!'}
         </p>
       )}
-
       <label>E-mail</label>
       <input
         {...register('email', {
@@ -91,7 +90,6 @@ const RegisterForm = () => {
           {errors?.email?.message || 'Error!'}
         </p>
       )}
-
       <label>Пароль</label>
       <input
         {...register('password', {
@@ -135,7 +133,6 @@ const RegisterForm = () => {
           {errors?.doublePassword?.message || 'Error!'}
         </p>
       )}
-
       <div className={styles.checkbox_block}>
         <label className={styles.label_checkbox}>
           {' '}
@@ -168,8 +165,9 @@ const RegisterForm = () => {
           </p>
         )}
       </div>
-
-      <input type='submit' />
+      <button className={BUTTON_CLASS.button_size_small} type='submit'>
+        Зарегистрироваться
+      </button>
     </form>
   );
 };
