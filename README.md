@@ -17,6 +17,7 @@
 - React
 - React-dom
 - React-router-dom
+- React-redux
 - Sass
 - Vite
 - Eslint
