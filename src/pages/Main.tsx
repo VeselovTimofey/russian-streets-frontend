@@ -5,6 +5,7 @@ import AboutUs from '../components/AboutUs.tsx';
 import OurOffers from '../components/OurOffers.tsx';
 import OurPossibilities from '../components/OurPossibilities.tsx';
 import UpcomingEvents from '../components/UpcomingEvents.tsx';
+import LastNews from '../components/LastNews.tsx';
 
 function Main() {
   return (
@@ -16,6 +17,7 @@ function Main() {
       <OurOffers />
       <OurPossibilities />
       <UpcomingEvents />
+      <LastNews isSixNews={true} />
     </main>
   );
 }

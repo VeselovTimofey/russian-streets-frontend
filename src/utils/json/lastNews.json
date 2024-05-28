@@ -1,0 +1,38 @@
+{
+  "new1": {
+    "id": "1",
+    "name": "Словарь райтера",
+    "image_url": "https://s3-alpha-sig.figma.com/img/fc18/986a/2d6fba0f749c0c8815f9c99b438f46ce?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dQ9BpdIgpc4afn3uMWgCzwwKW1JtCCiE9wIToF7dv7QgG07EMSDIWZ3IcLDU-1yiIGTjc7OVSUy4-6IiZFhbJFowPMfSHXEICXmORgdJh91vcbnjWLX0YSTQ3ehAAUNnulzpcd8Hc1dKo-3r0hVEB697thBNpzPmTXvP2Scb2XSrivMK4mC9xbwxwrDace~kmGUPmoKjOKLpSLXpWgT7g8Ri6dnSySI8Evo1QmI-HFLWOevEWoMMCZDpXMBJYkv0OdJqV72QNWuci5grzji2KE9Oj31xg01V8GtU4IcK0apsn4Pq5pLuA44b1BbZWkzXBpfc-OqqOsDDq6tJQbCKtw__",
+    "description": "Становимся ближе к уличной движухе, и сегодня расскажем про термины в мире граффити!  В мире граффити существует целый сленг, который понимают профессиональные художники и любители этого искусства. Например, термин 'бомбинг' означает нанесение граффити на видимую поверхность, обычно однотонной, с помощью краски или маркера. 'Тег' — это быстрое и простое подписывание имени или псевдонима художника. 'Писать' означает создание граффити, в то время как 'планы' относятся к предварительному проектированию работы перед нанесением."
+  },
+  "new2": {
+    "id": "2",
+    "name": "Запускаем мощный проект",
+    "image_url": "https://s3-alpha-sig.figma.com/img/41aa/a749/7ab01f98bbdf3a37c5bf5616f8fc707e?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dbUg~vje5ROA9-jsDh2C9s7FZb3sW99eIW3bZwrN3OvyXsm-PCNURn5CUmWCu2emQKCnoTOpSFzWODuAeuZ6heqJh8voUOLzBBdqu54SBYY8jHCvdPpFz~EM85BCTvZ-xoc0~T0p8fh9ZEQ~72okh8XMma-H46cydNH20c1bp9hwupx504oQflaGfd2sGLQgdIjOdW8gLW9jLWRjKvslC7gvRL5DEL9bAPUW0LA4AAT-sEleUR9kKFl~BRzr5O6agfNR1HwzpEaJX9jWMQBgqdl3GS-zlKaPNAMJCU6MDt3JIvHyzML~c~g8M3Dq7tg-oeF0uW6LZh950YHFTzxOAw__",
+    "description": "СпортБаза — курс, который подготовит тебя для новых побед в спортивной деятельности."
+  },
+  "new3": {
+    "id": "3",
+    "name": "Подборка зарубежных книг о стрит-арте",
+    "image_url": "https://s3-alpha-sig.figma.com/img/f783/de00/f76670a5144e17da74ab73e4cda973df?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mBp6puE5qq5YqRqyabVIwBY6OneavquNdHkewYji6PmYKSa~bM5eVypEiogeLykeAW9c745Jc2FutHnR-ouS-qls8cj~WpeuaGKAT35Wfuc1~gF3G~JNT47qwu8ENtquKN6nh6YXX6AxyNnZG3Wouwzq~gU3Dcts5Eo994w4X7Znlkl~it1HF5FY8QvR7wsz9KBqozMPApENSNsMX6G~DXa~brWJqdYKb10Vd0fC5TfU6bg~~KCZpGZ11eXpZbas~-GC8BKzGSFr9TMdqdIz14eFxzpeZOXxQ6-2YxhQK1Dq8DKECmpNbFhnxhYYlEF6hNbayV6idLEnYfWn17l0xQ__",
+    "description": "Бэнкси и его работы были довольно обсуждаемы в прошлом году. Но некоторые до сих пор не слышали ни о нем, ни о том, что важного стрит-артист делает для современности. Прочтение этой книги позволит понять яркого и порой политически агрессивного художника. В ней представлена уникальная коллекция фотографий работ в технике граффити, сопровожденная цитатами из интервью Бэнкси и эмоциональными комментариями автора книги."
+  },
+  "new4": {
+    "id": "4",
+    "name": "Мы врываемся в модные тренды!",
+    "image_url": "https://s3-alpha-sig.figma.com/img/3312/858d/dba5d89ebe1f6f44c64d50041cd8df9d?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iWWLzjyQmKtSKYMXoZ6gn49xJ1w~kN4HdIipHWsf9rvHRPtVP~ayS0xnQhh1RvJa5t0iPp4Y48CuEpN0mZftoMjoIgrL~zhR077lsLtBAJBvMou~negdkQx24jyARcjmEmFaYEWmsuRD~lMvIf7Y2A4Air3Im6SPiT91oPyKdOym9n-AI6OFU8CB3AdRFVm5gwthL917E49uqd9TUR6bf7pdUF8ujGNutphvznWQg7KFjpL1gpvGlm9RC7Qw~qNSg0JUX8q3jjj7mjhy8eXMHfVaA5wu7-grkf~hsDE--E0K2KAqVerc7P5CpCokrhnK-A5oS73ktdz6RjVD0WqP~w__",
+    "description": "Рады объявить, что «Улицы России» открывает свой магазин в ВКонтакте и спешим поделиться с вами нашим первым продуктом:"
+  },
+  "new5": {
+    "id": "5",
+    "name": "Подборка фильмов об уличной культуре",
+    "image_url": "https://s3-alpha-sig.figma.com/img/5f4c/cd1d/3c2e4c08548dc4dcc44c540700069ba0?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ladCIJbwfpZZQSuOtl8DoDovr-rDDL4V7qAL1C715dNACVryBT-9TU2Ey5us0oLfI6CdbrAOz~vTq8rQw7Qmnp6CClGry1C2TQE5afRMkAL-AqwtPTGSAUJNg7fhvX0xmpBbijlsaxgwbNWg5yV1PMZJylEQwT2areMmhbLdHcbIRkJ2HRIqNmai5afTs3iE7m~XXsB3EalzB4~UoOvBkZhhgG6NXrI7yAmVwJgBIMLLl3TG2DyoyiG7vhMolypSC6jfb9tpeW28ThnRK0ciqo4pNhAiGDS8UL8DwB5m3m7u0-qDMB3-vVkq9Ml5ez0lTdDdosY6bs-SQ0hzdokl~w__",
+    "description": "Драма Ларри Кларка рассказывает о жизни подростков середины 1990-х годов. Главной целью Кларка было создание эффекта документального фильма, поэтому при выборе костюмов фокус был направлен не на моду того времени, а на реальную жизнь американской молодежи. Камуфляж, мешковатые брюки, снэпбеки, футболки-рингеры и клетчатые рубашки – все это является атрибутами американских подростков 90-х."
+  },
+  "new6": {
+    "id": "6",
+    "name": "Мечтаешь статью частью «Улицы России»? ",
+    "image_url": "https://s3-alpha-sig.figma.com/img/1c5b/6b97/c36f7ca74d9bbb69860de5f374b13819?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=j5I8repbdtn6mKzY9mcuzv3TZxw0LNkswuxEhGkUZsEHuAmlFz7GBPN6ACijTAa7kT7cq9UZucPA1JZwOqqA7tVPxcsiUKp5zPKI2yOv4pkhQUtcNJCPaXb~axSemdBko61FmksXT3hN5uO4-t1nTYxAJ2Ij9vUs5zDuuCp6buyqRdLMLo8YQm-xIN0ilU51sPSVYs5kZW1c2JYERE2Jy0MNyCHmrLL1~Qeb0-h8qOp~OyJ2DCe8A2jTT~Rtlv6d52t2X9VlDUM6E7LxzPBLgkgafEzk4XAq05FA7fBeYJ9DpDzBPO45GVFOAAN5~L~Q4oU2YlUE9l9Jm6IlURUv6A__",
+    "description": "С 15.06 по 30.10 стартует образовательный проект «Улицы для всех», который позволит старшему поколению окунуться в мир молодёжи и стать ближе к понимаю уличной культуры."
+  }
+}

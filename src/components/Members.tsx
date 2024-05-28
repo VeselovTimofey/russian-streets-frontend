@@ -2,7 +2,7 @@ import membersJson from "../utils/json/members.json";
 import MemberCard from "./elements/MemberCard";
 
 function Members() {
-  let member = JSON.parse(JSON.stringify(membersJson));
+  const member = JSON.parse(JSON.stringify(membersJson));
 
   return (
     <section className="members section section_grid-column">

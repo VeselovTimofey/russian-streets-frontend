@@ -947,4 +947,69 @@ template {
   color: #222222;
 }
 
+.last-news {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-content: space-between;
+  gap: 60px 0;
+}
+.last-news h1 {
+  margin: 0;
+}
+.last-news__link {
+  justify-self: end;
+  text-decoration: none;
+}
+.last-news__cards {
+  grid-column: 1/3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px 0;
+}
+
+.news-card {
+  height: 404px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  background-color: #F4F4F4;
+}
+.news-card h2, .news-card p {
+  margin: 0;
+}
+.news-card:nth-child(1) {
+  width: 49.2%;
+}
+.news-card:nth-child(2) {
+  width: 23.8%;
+}
+.news-card:nth-child(3) {
+  width: 23.8%;
+}
+.news-card:nth-child(n+4) {
+  width: 32.2%;
+}
+.news-card__image {
+  height: 200px;
+  margin-bottom: 16px;
+  align-self: stretch;
+  object-fit: cover;
+  border: 2px solid #222222;
+}
+.news-card__discription {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.news-card__link {
+  margin: auto 0 3px 0;
+  align-self: flex-end;
+  text-decoration: none;
+  color: #222222;
+}
+
 /*# sourceMappingURL=index.css.map */

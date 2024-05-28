@@ -5,7 +5,7 @@ import EventCard from './elements/EventCard';
 import { BUTTON_CLASS } from '../utils/constans/button-constans';
 
 function UpcomingEvents() {
-  let events = JSON.parse(JSON.stringify(eventsJson));
+  const events = JSON.parse(JSON.stringify(eventsJson));
   return(
     <article className="upcoming-events">
       <h1 className="title-font title-font_regular title-font_size_medium">Ближайшие события</h1>
