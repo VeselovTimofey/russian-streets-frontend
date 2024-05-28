@@ -11,15 +11,18 @@
     height: 250px;
     width: 304px;
     grid-row: 1 / 4;
+    border: 2px solid #222222;
   }
 
-  &__profession {}
+  &__profession {
+    margin: 0;
+  }
 
   &__name {
-    margin-top: 16px;
+    margin: 16px 0 0 0;
   }
 
   &__description {
-    margin-top: 12px;
+    margin: 12px 0 0 0;
   }
 }

@@ -7,9 +7,9 @@ import { BUTTON_CLASS } from '../utils/constans/button-constans.tsx';
 
 import logoPath from '../images/svg/logo.svg';
 import locationPath from '../images/svg/location.svg';
-import buttonSearch from '../images/svg/buttonSearch.svg';
-import buttonAccount from '../images/svg/buttonAccount.svg';
-import menu from '../images/svg/menu.svg';
+import buttonSearchPath from '../images/svg/buttonSearch.svg';
+import buttonAccountPath from '../images/svg/buttonAccount.svg';
+import menuPath from '../images/svg/menu.svg';
 
 type HeaderProps = {
   isOpenPopupMenu: boolean;
@@ -28,9 +28,9 @@ function Header(props: HeaderProps) {
 
   return (
     <header className="header" aria-label="Заголовок.">
-      <img className="header__logo" src={logoPath} alt="Лого Улицы России." />
+      <img src={logoPath} alt="Лого Улицы России." />
       <ButtonWithImage image={locationPath} onClick={props.handleOpenPopupLocation} />
-      <nav className="header__nav">
+      <nav>
         <ul className="header__nav-menu">
           <li><Link className="header__link text-font text-font_bold text-font_size_big" to="/">Дисциплины</Link></li>
           <li><Link className="header__link text-font text-font_bold text-font_size_big" to="/">События</Link></li>
@@ -39,9 +39,9 @@ function Header(props: HeaderProps) {
       </nav>
       <ul className="header__menu">
         <li><button className={BUTTON_CLASS.button_size_small}>Поддержать организацию</button></li>
-        <li><ButtonWithImage image={buttonSearch} onClick={props.handleOpenPopupSearch} /></li>
-        <li><ButtonWithImage image={buttonAccount} onClick={() => {console.log('Функция в разработке.');}} /></li>
-        <li><ButtonWithImage image={menu} onClick={props.handleOpenPopupMenu}/></li>
+        <li><ButtonWithImage image={buttonSearchPath} onClick={props.handleOpenPopupSearch} /></li>
+        <li><ButtonWithImage image={buttonAccountPath} onClick={() => {console.log('Функция в разработке.');}} /></li>
+        <li><ButtonWithImage image={menuPath} onClick={props.handleOpenPopupMenu}/></li>
       </ul>
       <section className={'popup popup_background_grey' + isOpenSearch} onClick={props.handleClosePopup}>
         <Input id="header-search" placeholder="Искать &#128269;" type="text" title="" />
