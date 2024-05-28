@@ -1120,4 +1120,36 @@ template {
   color: #C40C0C;
 }
 
+.main-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-name {
+  margin-top: 100px;
+  height: 284px;
+  width: 90%;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  background-color: #222222;
+}
+.news-name Link {
+  text-decoration: none;
+}
+.news-name__nav {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.news-name__text {
+  margin: 0;
+  color: #FFFFFF;
+}
+
 /*# sourceMappingURL=index.css.map */

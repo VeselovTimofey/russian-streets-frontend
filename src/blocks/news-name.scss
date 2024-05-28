@@ -1,0 +1,28 @@
+.news-name {
+  margin-top: 100px;
+  height: 284px;
+  width: 90%;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  background-color: #222222;
+
+  Link {
+    text-decoration: none;
+  }
+
+  &__nav {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__text {
+    margin: 0;
+    color: #FFFFFF;
+  }
+}

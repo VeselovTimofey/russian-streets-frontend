@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import Header from './components/Header.tsx';
 import Main from './pages/Main.tsx';
+import News from './pages/News.tsx';
 import NotFound from './pages/NotFound.tsx';
 import Footer from './components/Footer.tsx';
 
@@ -45,6 +46,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/russian-streets-frontend/" element={<Main />} />
+        <Route path="/russian-streets-frontend/news/:id" element={<News />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

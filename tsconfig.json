@@ -24,6 +24,7 @@
     "src/components",
     "src/utils/types/images.d.ts",
     "src/pages/Main.tsx",
+    "src/pages/News.tsx",
     "src/pages/NotFound.tsx",
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
