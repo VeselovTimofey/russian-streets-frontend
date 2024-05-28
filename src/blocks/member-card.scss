@@ -1,0 +1,28 @@
+.member-card {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  justify-content: stretch;
+  align-content: start;
+  gap: 0 20px;
+  background-color: #F4F4F4;
+  
+  &__image {
+    height: 250px;
+    width: 304px;
+    grid-row: 1 / 4;
+    border: 2px solid #222222;
+  }
+
+  &__profession {
+    margin: 0;
+  }
+
+  &__name {
+    margin: 16px 0 0 0;
+  }
+
+  &__description {
+    margin: 12px 0 0 0;
+  }
+}

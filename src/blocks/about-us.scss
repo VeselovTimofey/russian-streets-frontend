@@ -1,0 +1,22 @@
+.about-us {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  &__title {
+    margin: 0 0 20px 0;
+    align-self: flex-start;
+  }
+
+  &__concept {
+    margin: 0;
+    text-align: center;
+  }
+
+  &__borderline {
+    width: 100%;
+    border-bottom: 1px solid #222222;
+  }
+}

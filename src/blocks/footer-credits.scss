@@ -1,0 +1,26 @@
+.footer-credits {
+  padding-top: 35px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  border-top: 1px solid #FFFFFF;
+
+  p {
+    margin: 0;
+    color: #FFFFFF;
+  }
+
+  &__link-block {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+  }
+
+  &__link {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,36 @@
+.header {
+  height: 92px;
+  width: 90%;
+  padding: 0 5%;
+  position: sticky;
+  top: 40px;
+  display: flex;
+  gap: 5.9%;
+  align-items: center;
+  background-color: #222222;
+  z-index: 3;
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__nav-menu {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+  }
+
+  &__menu {
+    width: 29%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+  }
+}

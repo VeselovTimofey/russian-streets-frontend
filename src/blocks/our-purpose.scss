@@ -1,0 +1,23 @@
+.our-purpose {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  gap: 16px 22px;
+
+  p {
+    margin: 0;
+  }
+  
+  &__image {
+    height: 331px;
+    width: 734px;
+    grid-row: 1/3;
+    border: 2px solid #222222;
+  }
+
+  &__title {
+    margin: 0;
+    align-self: end;
+  }
+}

@@ -1,0 +1,23 @@
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+
+    a {
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+  }
+}

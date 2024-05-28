@@ -1,0 +1,37 @@
+.event-card {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+  justify-content: start;
+  gap: 12px 20px;
+  background-color: #F4F4F4;
+
+  p {
+    margin: 0;
+  }
+
+  &__image {
+    height: 250px;
+    width: 304px;
+    grid-row: 1/5;
+    border: 2px solid #222222;
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  &__title {
+    margin: 4px 0 0 0;
+  }
+
+  &__link {
+    justify-self: end;
+    align-self: end;
+    text-decoration: none;
+    margin-bottom: 3px;
+    color: #222222;
+  }
+}

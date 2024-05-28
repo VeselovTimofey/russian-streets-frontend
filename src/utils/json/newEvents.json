@@ -1,0 +1,34 @@
+{
+  "event1": {
+    "id": "1",
+    "name": "Граффити Бит",
+    "description": "Соревнования и мастер-классы по street art, где улица становится полотном для творчества.",
+    "image_url": "https://s3-alpha-sig.figma.com/img/39fe/28eb/140cf79f975517ed816e743b70f96ca8?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gsDB3bTqA~V~02k2dhDZOTTk3OMrthjBn6jag0UP4j9j0xOwJTCei43AlyGEYOfC1IHuUkbtq3Z5vkHnyh0ZWZSgQmRlj4MW49nvcvRk6jaPO1VrXptpsIMzVf2mEKQe5WJcE6gYsjkwOIvaymnu71v6MCtLacHO1VLvWYYQFD7hr-FOrC7ha184G4sbH4xW0~IXUuHgv-f6cDKHCMQUd3J1Qa2TKonnWfh-udSf336nmYbAD0FvT8bsvj3iYR12tINel3i59xkhy~FprLa1chf1vhj-NeJi2fFwFq2Wxg-Ii8E~rB~3osANJesujYBthcKOhYTzaYnrjeMpm1rVuQ__",
+    "start_date": "03 июня",
+    "place": "Москва"
+  },
+  "event2": {
+    "id": "2",
+    "name": "Ритмы Асфальта",
+    "description": "Фестиваль уличных танцев, собирающий танцоров разных стилей для обмена опытом и мастерством.",
+    "image_url": "https://s3-alpha-sig.figma.com/img/8dbb/47cf/d04ddb9971ce482bb63480c8692e872c?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZbjTxYtchlErSOANABDR4eYROYXwaKnc76ecxxv8CQJw75rspu7EkRQevY-jIR-VfyaA0Ba-mmt2XroM0BNEtajTTv3FE6VmY-pRHELA1o4ldIYemlOa6CyLT1EFi0QwXJPQm0bpSJz8HPGusnpfD1RWBnWtsNPo26ZV-IKMeApcL4xMvcx08TVkR~WpV55sGmrdUJzBIfxAzMh0AY7o8eUz9YNJlgdOs3iwwWBhoVBUlS8OxAwM6vrikYYZkpjNqVi3ufAbEVefOvoTgfQpmm7Gkfbx2a-DY-hYjjdeLLOiFJZmO-aGpmjrXT17i8FU7PBIYcR306Wnh8bX7I86Bw__",
+    "start_date": "14 июня",
+    "place": "Москва"
+  },
+  "event3": {
+    "id": "3",
+    "name": "Скейт и Стиль",
+    "description": "Скейтборд-фестиваль, где участники могут показать свои трюки и стиль на специально оборудованных площадках.",
+    "image_url": "https://s3-alpha-sig.figma.com/img/d1c7/cc11/a50a618180a2393fdc49bf7346b7b076?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yx2oMBF5hBfBk99mEOZNFvm7gxyAlNuDDIUJjgavMyKVZZD3WaRj7f0k0MIot6b0jTZmrXAvbfLz4gS6XAGsFW01jvzZGHPFkdBcltrTBeqxEbBVlOlae5uN8ph4pcvyeVdeMUyKm6P9TrleSrYBqb8720aaJ43kKVCs2q7Ld0N4RsLHq43jTo2qFv2Be7~0U1TXxa8ERJUDSH2eTb2SsNwo4oQqLB77c~LEDBmSQltEGKqJRtDVnnB6IkAM6CeTkaJFBpRmOPeX9aHj6HMVZOrJuisb78NWlU41bTpnMKMJCrMy86jqGHpNAF-Qp4wXByAfB5cGZex76agBk9pLJQ__",
+    "start_date": "10 июня",
+    "place": "Москва"
+  },
+  "event4": {
+    "id": "4",
+    "name": "Хип-Хоп Вайбс",
+    "description": "Вечер живого хип-хопа, где каждый может выразить себя через музыку, танец и граффити.",
+    "image_url": "https://s3-alpha-sig.figma.com/img/59ae/6837/4fd1397a5e620d1fb9f080120c672a55?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hcMBPEtQ6qEFYiUDmnVtaXwyLSvZI0IG8v1lqreUj-ZS4ZQHRHbyOQCeFyKkH3LA9PttF-4-Nu1fo3yORr7yaLuaW-cdOaEdw-eKP3kWbENr9MwdYDFf-FUhw68ky0BtV0hQ4dkcaEb9aME~~2pf0O4fAOZdq5XeEPjUqZzVJbJyZYZeJL3uaTmjHYJOkuV9ZsjaFY8s5xYWyBslR~77dxgEnOrg13vCv~lJxpLjGgCx83p5KesxQSkSYi4pl7l8agbWgrLB6mxVU7~cDJnApP0hMuCHIwR3DYC997IU~qZ2Xdh5iZvd2uAiowP6-LKYB6rG9R-GoyY0~f9ansTBZw__",
+    "start_date": "24 июня",
+    "place": "Москва"
+  }
+}
