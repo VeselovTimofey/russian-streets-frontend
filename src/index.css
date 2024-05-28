@@ -349,6 +349,7 @@ template {
   max-width: 1440px;
   overflow-x: scroll;
   margin: 0 auto;
+  position: relative;
 }
 .page ul {
   margin: 0;
@@ -503,11 +504,12 @@ template {
 
 .header {
   height: 92px;
-  width: 100%;
+  width: 90%;
+  padding: 0 5%;
   position: sticky;
   top: 40px;
   display: flex;
-  justify-content: space-evenly;
+  gap: 5.9%;
   align-items: center;
   background-color: #222222;
   z-index: 3;
@@ -636,18 +638,17 @@ template {
   width: 100%;
   padding: 0 5%;
   position: relative;
-  overflow: hidden;
   justify-content: center;
   gap: 24px;
 }
 .intro__video {
-  width: 100vw;
-  height: 100%;
+  width: 100%;
+  height: auto;
+  padding: 0 5%;
   position: absolute;
-  right: 0;
+  left: -5%;
   top: 0;
   border: 0;
-  transform: scaleX(1.75);
   z-index: -1;
 }
 .intro__title {
