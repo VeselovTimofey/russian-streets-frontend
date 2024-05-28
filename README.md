@@ -10,7 +10,7 @@
 И доказывают, что этим может заниматься любой.
 
 ## Ссылка на проект
-[![Site](https://veselovtimofey.github.io/russian-streets-frontend/)]()
+[Сайт](https://veselovtimofey.github.io/russian-streets-frontend/)
 
 ## Технологии
 - TypeScript
@@ -40,7 +40,7 @@ npm run dev
 ```
 
 ## media queries
- *1440px
+ *1440px \
  *320px - в разработке
 
 
