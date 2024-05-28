@@ -1,14 +1,14 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { TDisciplineState } from "../actions/actionTypes";
-import { IDiscipline } from "../../utils/types";
+import { IDiscipline } from "../utils/types";
 
 const initialState: TDisciplineState = {
 
   discipline:
   {
-    name: '',
-    images_url: [],
-    description: '',
+    name: 'Skateboarding',
+    images_url: ['src\images\Image.png'],
+    description: 'Скейтбординг (англ. skateboarding) — экстремальный вид спорта, связанный с катанием, преодолением препятствий и акробатическими трюками на доске с роликами. Скейтбординг привлекает не только молодёжь, но и людей среднего возраста. Это можно объяснить его зрелищностью и доступностью. Как вид спорта скейтборд популярен давно, но международным спортивным комитетом он признан относительно недавно и стал официальным видом спорта.',
     rules: '',
   },
   isLoading: false,

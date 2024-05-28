@@ -1,0 +1,20 @@
+.section {
+  margin: 0;
+  width: 100vw;
+  height: 80vh;
+  padding: 20px;
+  h1 {
+    margin-bottom: 60px;
+  }
+}
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.nav_wrapper {
+  width: 27%;
+}
+.wrapper_content {
+  width: 70%;
+}
