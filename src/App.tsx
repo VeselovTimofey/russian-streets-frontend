@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from './components/Header.tsx';
 import Main from './pages/Main.tsx';
+import Footer from './components/Footer.tsx';
 
 function App() {
   const [popupMenu, setPopupMenu] = React.useState(false);
@@ -40,6 +41,7 @@ function App() {
         handleClosePopup={closePopup}
       />
       <Main />
+      <Footer />
     </>
   );
 }
