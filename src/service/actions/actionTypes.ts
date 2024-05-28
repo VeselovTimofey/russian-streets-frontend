@@ -1,4 +1,4 @@
-import { ADD_USER } from "../utils/constans"
+import { ADD_USER } from "../utils/constant"
 import { IDiscipline, IUser } from "../utils/types";
 
 export type TAddUserAction = {

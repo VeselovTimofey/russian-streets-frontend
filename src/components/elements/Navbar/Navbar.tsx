@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import { TdisciplinesButtons } from '../../../service/utils/types';
 import styles from './styles.module.scss';
 import { findDiscipline } from '../../../service/actions/disciplineAction';
-import { disciplines } from '../../../service/utils/constans';
+import { disciplines } from '../../../service/utils/constant';
 
 const Navbar = () => {
   const handleClick = (name: string) => {

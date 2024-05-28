@@ -2,6 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { TDisciplineState } from "../actions/actionTypes";
 import { IDiscipline } from "../utils/types";
 
+
 const initialState: TDisciplineState = {
 
   discipline:
