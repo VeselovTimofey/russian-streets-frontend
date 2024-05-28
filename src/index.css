@@ -1108,4 +1108,16 @@ template {
   align-items: center;
 }
 
+.not-found {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin: 140px 0 874px 0;
+}
+.not-found__subtitle {
+  color: #C40C0C;
+}
+
 /*# sourceMappingURL=index.css.map */
