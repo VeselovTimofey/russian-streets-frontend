@@ -1120,4 +1120,120 @@ template {
   color: #C40C0C;
 }
 
+.errors {
+  color: red;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+.form label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.checkbox_block {
+  display: flex;
+  flex-direction: column;
+}
+.checkbox_block p {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.label_checkbox {
+  display: flex;
+  align-items: baseline;
+}
+.label_checkbox p {
+  margin-left: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+.label_checkbox p a {
+  cursor: pointer;
+}
+
+.input {
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+}
+
+.item {
+  border-bottom: 1px solid #f4f4f4;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 16px;
+  text-decoration: none;
+  list-style: none;
+  color: #222222;
+  cursor: pointer;
+}
+
+.item:hover {
+  color: red;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.left_block {
+  display: flex;
+  min-height: 100vh;
+  height: auto;
+  width: 50%;
+  background: #222222;
+}
+
+.form {
+  max-width: 555px;
+  padding: 80px 90px;
+}
+.form h1 {
+  font-family: Bahnschrift;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.right_block {
+  width: 48%;
+  height: 100%;
+  background-image: url(../../assets/Address.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+.nav a {
+  padding: 0 10px;
+  background: #222222;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=index.css.map */
