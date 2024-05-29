@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import MoreLink from "./MoreLink";
 
 type InputProps = {
   id: number;
@@ -19,7 +19,7 @@ function EventCard(props: InputProps) {
       </div>
       <h2 className="event-card__title title-font title-font_regular title-font_size_small">{props.name}</h2>
       <p className="text-font text-font_regular text-font_size_big">{props.description}</p>
-      <Link className="event-card__link text-font text-font_regular text-font_size_big" to="/">Подробнее&nbsp;&#707;</Link>
+      <MoreLink to="/" />
     </article>
   );
 }
