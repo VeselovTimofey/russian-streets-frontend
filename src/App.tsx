@@ -5,7 +5,6 @@ import Header from './components/Header.tsx';
 import Main from './pages/Main.tsx';
 import NotFound from './pages/NotFound.tsx';
 import Footer from './components/Footer.tsx';
-import RegistrationPage from './pages/Registration/RegistrationPage.tsx';
 
 function App() {
   const [popupMenu, setPopupMenu] = React.useState(false);
@@ -46,7 +45,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/russian-streets-frontend/' element={<Main />} />
-        <Route path='/reg' element={<RegistrationPage />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />

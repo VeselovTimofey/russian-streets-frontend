@@ -1,0 +1,28 @@
+.registration {
+  width: 100%;
+  height: 1042px;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+
+  &__left-block {
+    width: 43.5%;
+    padding: 80px 7%;
+    display: flex;
+    flex-direction: column;
+    background-color: #222222;
+  }
+
+  &__text {
+    color: #FFFFFF;
+  }
+
+  &__image {
+    width: 41%;
+    border: 2px solid #222222;
+  }
+}
