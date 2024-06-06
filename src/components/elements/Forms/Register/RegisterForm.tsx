@@ -2,7 +2,6 @@ import { useId } from 'react';
 import { useForm } from 'react-hook-form';
 
 import Input from '../../Input';
-import styles from '../styles.module.scss';
 import { IUser } from '../../../../service/utils/types';
 import { regUser } from '../../../../service/actions/userActions';
 import { BUTTON_CLASS } from '../../../../utils/constans/button-constans';
@@ -23,8 +22,9 @@ function RegisterForm() {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+    <form className="form" onSubmit={handleSubmit(onSubmit)}>
       <Input
+        class="register"
         id="firstname"
         placeholder="" 
         type="text" 
@@ -37,7 +37,8 @@ function RegisterForm() {
         }
         error={errors.firstName}
       />
-      <Input 
+      <Input
+        class="register"
         id="lastName"
         placeholder=""
         type="text"
@@ -51,6 +52,7 @@ function RegisterForm() {
         error={errors.lastName}
       />
       <Input
+        class="register"
         id="phone"
         placeholder=""
         type="tel"
@@ -63,6 +65,7 @@ function RegisterForm() {
         error={errors.phone}
       />
       <Input
+        class="register"
         id="email"
         placeholder=""
         type="email"
@@ -76,6 +79,7 @@ function RegisterForm() {
         error={errors.email}
       />
       <Input
+        class="register"
         id="password"
         placeholder=""
         type="password"
@@ -93,6 +97,7 @@ function RegisterForm() {
         error={errors.password}
       />
       <Input
+        class="register"
         id="doublePassword"
         placeholder=""
         type="password"
@@ -109,8 +114,8 @@ function RegisterForm() {
         }
         error={errors.doublePassword}
       />
-      <div className={styles.checkbox_block}>
-        <label className={styles.label_checkbox}>
+      <div /* className={styles.checkbox_block} */>
+        <label /* className={styles.label_checkbox} */>
           {' '}
           <input {...register('mailing')} type='checkbox' />
           <p>
@@ -118,7 +123,7 @@ function RegisterForm() {
             (необязательно)
           </p>
         </label>
-        <label className={styles.label_checkbox}>
+        <label /* className={styles.label_checkbox} */>
           <input
             {...register('agreement', {
               required: 'Это поле обязательно для заполнения!',
@@ -135,7 +140,7 @@ function RegisterForm() {
           <p
             id={`${id}-firstName-error-message`}
             aria-live='assertive'
-            className={styles.errors}
+            /* className={styles.errors} */
           >
             {errors?.agreement?.message || 'Error!'}
           </p>

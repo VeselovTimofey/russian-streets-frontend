@@ -10,10 +10,17 @@ $font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
   }
 }
 
+@mixin text-white {
+  &_color_white {
+    color: #FFFFFF;
+  }
+}
+
 .title-font {
   font-family: $font-stack-Benzin;
 
   @include text-weight;
+  @include text-white;
 
   &_size_big {
     font-size: 96px;
@@ -36,6 +43,8 @@ $font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
   font-size: 20px;
   line-height: auto;
 
+  @include text-white;
+
   &_medium {
     font-weight: 500;
   }
@@ -49,6 +58,7 @@ $font-stack-Benzin: 'Benzin', 'Bahnschrift', sans-serif;
   font-family: 'Bahnschrift', 'Arial', sans-serif;
   
   @include text-weight;
+  @include text-white;
 
   &_size_very-big {
     font-size: 24px;

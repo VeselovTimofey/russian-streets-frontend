@@ -365,6 +365,9 @@ template {
 .title-font_regular {
   font-weight: 400;
 }
+.title-font_color_white {
+  color: #FFFFFF;
+}
 .title-font_size_big {
   font-size: 96px;
   line-height: 90px;
@@ -383,6 +386,9 @@ template {
   font-size: 20px;
   line-height: auto;
 }
+.subtitle-font_color_white {
+  color: #FFFFFF;
+}
 .subtitle-font_medium {
   font-weight: 500;
 }
@@ -398,6 +404,9 @@ template {
 }
 .text-font_regular {
   font-weight: 400;
+}
+.text-font_color_white {
+  color: #FFFFFF;
 }
 .text-font_size_very-big {
   font-size: 24px;
@@ -464,6 +473,11 @@ template {
 .form {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+.form p {
+  margin: 0;
+  padding: 0;
 }
 .form__input {
   width: 306px;
@@ -579,6 +593,7 @@ template {
 .popup__search-element {
   width: 100vw;
   position: sticky;
+  left: 0;
   top: 172px;
   align-items: center;
 }

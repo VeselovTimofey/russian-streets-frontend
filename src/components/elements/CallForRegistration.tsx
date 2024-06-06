@@ -1,4 +1,4 @@
-import { BUTTON_CLASS } from '../../utils/constans/button-constans.tsx';
+import { BUTTON_CLASS } from '../../utils/constans/button-constans.ts';
 
 function CallForRegistration() {
   return (
