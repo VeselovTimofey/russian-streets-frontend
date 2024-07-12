@@ -1,10 +1,10 @@
 import { useId } from 'react';
 import { useForm } from 'react-hook-form';
 
-import Input from '../../Input';
-import { IUser } from '../../../../service/utils/types';
-import { regUser } from '../../../../service/actions/userActions';
-import { BUTTON_CLASS } from '../../../../utils/constans/button-constans';
+import Input from './Input';
+import { IUser } from '../../service/utils/types';
+import { regUser } from '../../service/actions/userActions';
+import { BUTTON_CLASS } from '../../utils/constans/button-constans';
 
 function RegisterForm() {
   const id: string = useId();

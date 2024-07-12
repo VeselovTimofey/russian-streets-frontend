@@ -1,4 +1,4 @@
-import RegisterForm from './elements/Forms/Register/RegisterForm';
+import RegisterForm from './elements/RegisterForm';
 import registration from '../images/registration.png';
 
 function Registration() {
