@@ -1,4 +1,4 @@
-import MoreLink from "./MoreLink";
+import MoreLink from './MoreLink.tsx';
 
 type InputProps = {
   id: number;
@@ -10,7 +10,7 @@ type InputProps = {
 };
 
 function EventCard(props: InputProps) {
-  return(
+  return (
     <article className="event-card" key={props.id}>
       <img className="event-card__image" src={props.image_url} />
       <div className="event-card__info">

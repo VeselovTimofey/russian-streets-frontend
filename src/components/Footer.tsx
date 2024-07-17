@@ -6,7 +6,7 @@ import vkPath from '../images/svg/vk.svg';
 import youtubePath from '../images/svg/youtube.svg';
 
 function Footer() {
-  return(
+  return (
     <footer className="footer">
       <section className="footer-nav">
         <img src={logoPath} alt="Лого Улицы России." />

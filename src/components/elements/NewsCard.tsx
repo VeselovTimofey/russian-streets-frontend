@@ -1,4 +1,4 @@
-import MoreLink from "./MoreLink";
+import MoreLink from './MoreLink.tsx';
 
 type InputProps = {
   id: number;
@@ -8,7 +8,7 @@ type InputProps = {
 };
 
 function NewsCard(props: InputProps) {
-  return(
+  return (
     <article className="news-card" key={props.id}>
       <img className="news-card__image" src={props.image_url} />
       <h2 className="subtitle-font subtitle-font_regular">{props.name}</h2>

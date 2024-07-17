@@ -1,7 +1,7 @@
 import ourOffers from '../images/ourOffers.png';
 
 function OurOffers() {
-  return(
+  return (
     <section className="our-offers">
       <h1 className="title-font title-font_regular title-font_size_small">Что мы предлагаем</h1>
       <ul className="our-offers__list">

@@ -1,5 +1,5 @@
-import Navbar from './elements/Navbar';
-import Contents from './elements/Container';
+import Navbar from './elements/Navbar.tsx';
+import Contents from './elements/Container.tsx';
 
 
 function Disciplines() {
@@ -10,6 +10,6 @@ function Disciplines() {
       <Contents />
     </section>
   );
-};
+}
 
 export default Disciplines;

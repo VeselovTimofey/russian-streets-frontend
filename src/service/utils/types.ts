@@ -1,6 +1,6 @@
 export interface IDiscipline {
   name: string,
-  images_url: string[],
+  imagesUrl: string[],
   description: string,
   rules: string
 }

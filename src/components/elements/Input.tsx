@@ -1,9 +1,9 @@
-import type { UseFormRegisterReturn, FieldError } from "react-hook-form";
+import type { UseFormRegisterReturn, FieldError } from 'react-hook-form';
 
-import { INPUT_CLASS } from "../../utils/constans/input-constans";
+import { INPUT_CLASS } from '../../utils/constans/input-constans';
 
 type InputProps = {
-  class: "register" | "search",
+  class: 'register' | 'search',
   id: string;
   placeholder: string;
   type: string;

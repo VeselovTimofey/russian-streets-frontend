@@ -1,4 +1,4 @@
-import RegisterForm from './elements/RegisterForm';
+import RegisterForm from './elements/RegisterForm.tsx';
 import registration from '../images/registration.png';
 
 function Registration() {
@@ -11,6 +11,6 @@ function Registration() {
       <img src={registration} alt="Велосипедист на фоне обрыва." className="registration__image" />
     </section>
   );
-};
+}
 
 export default Registration;

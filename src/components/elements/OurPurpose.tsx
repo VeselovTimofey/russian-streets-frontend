@@ -1,4 +1,4 @@
-import ourPurpose from '../../images/ourPurpose.png'
+import ourPurpose from '../../images/ourPurpose.png';
 
 function OurPurpose() {
   return (
