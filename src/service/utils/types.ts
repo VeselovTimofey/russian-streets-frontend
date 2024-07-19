@@ -1,14 +1,15 @@
 export interface IDiscipline {
   name: string,
-  images_url: string[],
+  imagesUrl: string[],
   description: string,
   rules: string
-
 }
+
 export type TdisciplinesButtons = {
   name: string;
   to: string
-}
+};
+
 export interface IUser {
   firstName: string
   lastName: string

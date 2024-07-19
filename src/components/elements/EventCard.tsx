@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import MoreLink from './MoreLink.tsx';
 
 type InputProps = {
   id: number;
@@ -10,7 +10,7 @@ type InputProps = {
 };
 
 function EventCard(props: InputProps) {
-  return(
+  return (
     <article className="event-card" key={props.id}>
       <img className="event-card__image" src={props.image_url} />
       <div className="event-card__info">
@@ -19,7 +19,7 @@ function EventCard(props: InputProps) {
       </div>
       <h2 className="event-card__title title-font title-font_regular title-font_size_small">{props.name}</h2>
       <p className="text-font text-font_regular text-font_size_big">{props.description}</p>
-      <Link className="event-card__link text-font text-font_regular text-font_size_big" to="/">Подробнее&nbsp;&#707;</Link>
+      <MoreLink to="/" />
     </article>
   );
 }

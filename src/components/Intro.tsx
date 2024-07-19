@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { BUTTON_CLASS } from '../utils/constans/button-constans.tsx';
+import { BUTTON_CLASS } from '../utils/constans/button-constans';
 import RussianStreet from '../images/video/RussianStreet.mp4';
 
 function Intro() {

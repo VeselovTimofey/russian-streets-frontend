@@ -6,7 +6,8 @@ import OurOffers from '../components/OurOffers.tsx';
 import OurPossibilities from '../components/OurPossibilities.tsx';
 import UpcomingEvents from '../components/UpcomingEvents.tsx';
 import LastNews from '../components/LastNews.tsx';
-import Disciplines from '../pages/Disciplines/Disciplines.tsx';
+import Disciplines from '../components/Disciplines.tsx';
+import Registration from '../components/Registration.tsx';
 
 function Main() {
   return (
@@ -20,6 +21,7 @@ function Main() {
       <OurPossibilities />
       <UpcomingEvents />
       <LastNews isSixNews={true} />
+      <Registration />
     </main>
   );
 }

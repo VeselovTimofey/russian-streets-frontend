@@ -22,9 +22,12 @@
   },
   "include": [
     "src/components",
+    "src/pages",
+    "src/service",
+    "src/utils/constans",
     "src/utils/types/images.d.ts",
-    "src/pages/Main.tsx",
-    "src/pages/NotFound.tsx",
+    "src/App.tsx",
+    "src/index.tsx",
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

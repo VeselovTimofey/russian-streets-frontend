@@ -1,5 +1,5 @@
-import membersJson from "../utils/json/members.json";
-import MemberCard from "./elements/MemberCard";
+import membersJson from '../utils/json/members.json';
+import MemberCard from './elements/MemberCard.tsx';
 
 function Members() {
   const member = JSON.parse(JSON.stringify(membersJson));

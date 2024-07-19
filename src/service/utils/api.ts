@@ -1,7 +1,7 @@
-import { IUser } from "./types";
+import { IUser } from './types';
 
 // универсальные шапка
-type universalType = {
+type UniversalType = {
   method?: 'GET' | 'POST' | 'PATCH' | 'PUT' | 'DELETE';
   headers: {
     'Content-Type': string;
@@ -9,10 +9,15 @@ type universalType = {
   };
   body?: string;
 };
+
+export const checkResponse = (res: Response) => {
+  return res.ok ? res.json() : res.json().then((err) => Promise.reject(err));
+};
+
 //универсальный запрос
-export const universalRequestType = (url: string, options?: universalType) => {
-  return fetch(url, options).then(checkResponse)
-}
+export const universalRequestType = (url: string, options?: UniversalType) => {
+  return fetch(url, options).then(checkResponse);
+};
 
 // стандартный ответ от сервера
 export type ResponseDefaultType<S = string> = {
@@ -20,27 +25,23 @@ export type ResponseDefaultType<S = string> = {
   message: S;
 };
 
-export const checkResponse = (res: Response) => {
-  return res.ok ? res.json() : res.json().then((err) => Promise.reject(err));
-};
-
-const api = 'http://localhost:3001'
+const api = 'http://localhost:3001';
 
 //content
 
 export const getDiscipline = (name: string) =>
   universalRequestType(`${api}/dis/id`, {
-    method: "GET",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(name)
-  })
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(name),
+  });
 
 
 // user
 export const getRegistrationUser = (data: IUser) =>
   universalRequestType(`${api}/auth/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       email: data.email,
       password: data.password,
@@ -48,9 +49,6 @@ export const getRegistrationUser = (data: IUser) =>
       firstName: data.firstName,
       phone: data.phone,
       mailing: data.mailing,
-      agreement: data.agreement
+      agreement: data.agreement,
     }),
-  })
-
-
-
+  });

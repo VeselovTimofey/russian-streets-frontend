@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { BUTTON_CLASS } from '../utils/constans/button-constans';
 
 function NotFound() {
-  return(
+  return (
     <section className="not-found">
       <h1 className="title-font title-font_regular title-font_size_medium">Страница не найдена</h1>
       <h2 className="not-found__subtitle title-font title-font_regular title-font_size_big">404</h2>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ButtonWithImage from './elements/ButtonWithImage.tsx';
 import Input from './elements/Input.tsx';
 
-import { BUTTON_CLASS } from '../utils/constans/button-constans.tsx';
+import { BUTTON_CLASS } from '../utils/constans/button-constans';
 
 import logoPath from '../images/svg/logo.svg';
 import locationPath from '../images/svg/location.svg';
@@ -44,7 +44,7 @@ function Header(props: HeaderProps) {
         <li><ButtonWithImage image={menuPath} onClick={props.handleOpenPopupMenu}/></li>
       </ul>
       <section className={'popup popup_background_grey' + isOpenSearch} onClick={props.handleClosePopup}>
-        <Input id="header-search" placeholder="Искать &#128269;" type="text" title="" />
+        <Input class="search" id="header-search" placeholder="Искать &#128269;" type="text" title="" />
       </section>
       <section className={'popup popup_background_black' + isOpenMenu} onClick={props.handleClosePopup}>
         <nav className="popup__menu">

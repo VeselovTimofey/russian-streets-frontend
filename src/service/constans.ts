@@ -1,4 +1,4 @@
-import { TdisciplinesButtons } from "./utils/types";
+import { TdisciplinesButtons } from './utils/types';
 
 export const disciplines: TdisciplinesButtons[] =
   [
@@ -13,6 +13,6 @@ export const disciplines: TdisciplinesButtons[] =
     { name: 'Breaking', to: '/breaking' },
     { name: 'BMX', to: '/bmx' },
     { name: 'Scoot', to: '/scoot' },
-  ]
+  ];
 
-export const ADD_USER = 'ADD_USER'
+export const ADD_USER = 'ADD_USER';

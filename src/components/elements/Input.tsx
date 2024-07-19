@@ -1,16 +1,23 @@
+import type { UseFormRegisterReturn, FieldError } from 'react-hook-form';
+
+import { INPUT_CLASS } from '../../utils/constans/input-constans';
+
 type InputProps = {
+  class: 'register' | 'search',
   id: string;
   placeholder: string;
   type: string;
   title: string;
+  register?: UseFormRegisterReturn;
+  error?: FieldError;
 };
 
 function Input(props: InputProps) {
   return (
-    <label className="form popup__search-element" htmlFor={props.id}>
-      {props.title && <p className="text-font text-font_bold text-font_size_medium">{props.title}</p>}
-      <input className="popup__search-input text-font text-font_regular text-font_size_medium" type={props.type} name={props.id} id={props.id} placeholder={props.placeholder} />
-      <span className="text-font text-font_regular text-font_size_tiny form__input-error"></span>
+    <label className={INPUT_CLASS[props.class].label} htmlFor={props.id}>
+      {props.title && <p className={INPUT_CLASS[props.class].title}>{props.title}</p>}
+      <input className={INPUT_CLASS[props.class].input} type={props.type} id={props.id} placeholder={props.placeholder} {...props.register} />
+      {props.error && <span className={INPUT_CLASS[props.class].error} id={props.id} aria-live="assertive">{props.error.message}</span>}
     </label>
   );
 }
