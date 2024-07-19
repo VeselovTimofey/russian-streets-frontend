@@ -5,7 +5,7 @@ import { useAppDispatch } from '../hooks/hooks';
 import { addUserSuccess, addUserError } from '../slice/userSlice';
 
 // регистрация
-export const useRegUser = async (data: IUser) => {
+export const RegUser = async (data: IUser) => {
   const dispatch = useAppDispatch();
   getRegistrationUser(data)
     .then((res) => {

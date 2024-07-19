@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 import Input from './Input.tsx';
 import { IUser } from '../../service/utils/types';
-import { useRegUser } from '../../service/actions/userActions';
+import { RegUser } from '../../service/actions/userActions';
 import { BUTTON_CLASS } from '../../utils/constans/button-constans';
 
 function RegisterForm() {
@@ -17,7 +17,7 @@ function RegisterForm() {
   } = useForm<IUser>({ mode: 'onBlur' });
 
   const onSubmit = (data: IUser) => {
-    useRegUser(data);
+    RegUser(data);
     reset();
   };
 

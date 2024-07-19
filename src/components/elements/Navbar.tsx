@@ -1,11 +1,11 @@
 import { ReactElement } from 'react';
 import { TdisciplinesButtons } from '../../service/utils/types';
-import { useFindDiscipline } from '../../service/actions/disciplineAction';
+import { FindDiscipline } from '../../service/actions/disciplineAction';
 import { disciplines } from '../../service/utils/constant';
 
 function Navbar() {
-  function useHandleClick(name: string) {
-    useFindDiscipline(name);
+  function handleClick(name: string) {
+    FindDiscipline(name);
   }
 
   return (
@@ -15,7 +15,7 @@ function Navbar() {
           <li
             className="disciplines__element text-font text-font_regular text-font_size_big"
             key={item.name}
-            onClick={() => useHandleClick(item.name)}
+            onClick={() => handleClick(item.name)}
           >
             {item.name}
           </li>
