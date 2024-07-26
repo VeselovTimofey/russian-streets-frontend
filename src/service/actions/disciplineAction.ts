@@ -1,10 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getDisciplinesNames } from '../../utils/api/disciplineApi';
+import { getDisciplinesNames, getShortСontentofDiscipline, getFullContentofDiscipline } from '../../utils/api/disciplineApi';
 import { IDiscipline } from '../utils/types';
+import { IDisciplineContent } from './actionTypes';
 
 
 const disciplinesNames = createAsyncThunk<IDiscipline[], void, { rejectValue: string }>(
-  'discipline/getAllDiscipline', async (_, { rejectWithValue }) => {
+  'discipline/getAllDisciplinesNames', async (_, { rejectWithValue }) => {
     try {
       const response = await getDisciplinesNames();
       if (!response.ok) {
@@ -21,4 +22,23 @@ const disciplinesNames = createAsyncThunk<IDiscipline[], void, { rejectValue: st
   },
 );
 
-export default disciplinesNames;
+const disciplineContent = createAsyncThunk<IDiscipline[], IDisciplineContent, { rejectValue: string }>(
+  'discipline/getDisciplineContent', async ( props, { rejectWithValue }) => {
+    const {name, isFullContent} = props;
+    try {
+      const response = isFullContent ? await getFullContentofDiscipline(name) : await getShortСontentofDiscipline(name);
+      if (!response.ok) {
+        throw new Error('Не удалось получить иноформацию о дисциплине.');
+      }
+      const data = await response.json();
+      return data;
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        return rejectWithValue(error.message);
+      }
+      return rejectWithValue('Не удалось получить название дисциплин.');
+    }
+  },
+);
+
+export  {disciplinesNames, disciplineContent};

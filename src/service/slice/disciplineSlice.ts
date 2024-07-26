@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { TDisciplineState } from '../actions/actionTypes';
-import disciplinesNames from '../actions/disciplineAction';
+import {disciplinesNames, disciplineContent} from '../actions/disciplineAction';
 
 
 const initialState: TDisciplineState = {
@@ -22,6 +22,30 @@ const disciplineSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(disciplinesNames.pending, (state: TDisciplineState) => {
+        const newState = {
+          ...state,
+          error: '',
+          isLoading: true,
+        };
+        return newState;
+      })
+      .addCase(disciplinesNames.fulfilled, (state: TDisciplineState, action) => {
+        const newState = {
+          ...state,
+          isLoading: false,
+          discipline: action.payload,
+        };
+        return newState;
+      })
+      .addCase(disciplinesNames.rejected, (state: TDisciplineState, action) => {
+        const newState = {
+          ...state,
+          isLoading: false,
+          error: action.payload,
+        }
+        return newState;
+      })
+      .addCase(disciplineContent.pending, (state: TDisciplineState) => {
         const newState = {
           ...state,
           error: '',
