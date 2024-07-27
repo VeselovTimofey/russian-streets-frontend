@@ -1,15 +1,15 @@
 {
   "disciplines": [
-    "Street art",
-    "Parkour",
-    "Workout",
-    "Freerun",
-    "Hip-Hop dance",
-    "Trieking",
-    "Rap",
-    "Breaking",
-    "BMX",
-    "Skateboarding",
-    "Scoot"
+    {"name": "Street art"},
+    {"name": "Parkour"},
+    {"name": "Workout"},
+    {"name": "Freerun"},
+    {"name": "Hip-Hop dance"},
+    {"name": "Trieking"},
+    {"name": "Rap"},
+    {"name": "Breaking"},
+    {"name": "BMX"},
+    {"name": "Skateboarding"},
+    {"name": "Scoot"}
   ]
 }

@@ -53,7 +53,7 @@ const disciplineSlice = createSlice({
         };
         return newState;
       })
-      .addCase(disciplinesNames.fulfilled, (state: TDisciplineState, action) => {
+      .addCase(disciplineContent.fulfilled, (state: TDisciplineState, action) => {
         const newState = {
           ...state,
           isLoading: false,
@@ -61,7 +61,7 @@ const disciplineSlice = createSlice({
         };
         return newState;
       })
-      .addCase(disciplinesNames.rejected, (state: TDisciplineState, action) => {
+      .addCase(disciplineContent.rejected, (state: TDisciplineState, action) => {
         const newState = {
           ...state,
           isLoading: false,
