@@ -29,12 +29,20 @@ const disciplineSlice = createSlice({
         };
         return newState;
       })
-      .addCase(disciplinesNames.fulfilled, (state: TDisciplineState, action) => {
-        const newState = {
-          ...state,
+      .addCase(disciplinesNames.fulfilled, (_, action) => {
+        const newState: TDisciplineState = {
+          disciplines: [],
+          error: '',
           isLoading: false,
-          discipline: action.payload,
         };
+        action.payload.forEach((element) => {
+          newState.disciplines.push({
+            name: element.name,
+            imagesUrl: [''],
+            description: '',
+            rules: '',
+          })
+        })
         return newState;
       })
       .addCase(disciplinesNames.rejected, (state: TDisciplineState, action) => {
