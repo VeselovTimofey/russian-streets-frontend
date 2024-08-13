@@ -9,7 +9,7 @@
     {"name": "Rap"},
     {"name": "BMX"},
     {"name": "Skateboarding"},
-    {"name": "Scoot"}
+    {"name": "scootering"}
   ],
   "discipline/:name": [
     {
@@ -51,6 +51,16 @@
       "name": "BMX",
       "image_urls": ["https://upload.wikimedia.org/wikipedia/commons/0/09/Jomopro09-expert-flat-04.jpg"],
       "description": "BMX (Bicycle Moto Cross) — разновидность велосипеда, изначально придуманная взрослыми любителями мотокросса для тренировок."
+    },
+    {
+      "name": "Skateboarding",
+      "image_urls": ["https://upload.wikimedia.org/wikipedia/commons/a/a9/Skaters1.jpg", "https://upload.wikimedia.org/wikipedia/commons/4/42/Frontsiderock.jpg"],
+      "description": "Скейтбо́рдинг (англ. skateboarding) — экстремальный вид спорта, заключающийся в катании и в исполнении различных трюков на скейтборде."
+    },
+    {
+      "name": "scootering",
+      "image_urls": ["https://upload.wikimedia.org/wikipedia/commons/7/74/%D0%9F34415.jpg"],
+      "description": "Самокатный спорт или же кикскутеринг (англ. scootering, freestyle scootering) — экстремальный вид спорта, заключающийся в катании и исполнении трюков на специальном трюковом самокате. Человека, занимающегося самокатным спортом, называют самокатером (англ. scooter rider), или просто райдером. На данный момент, кикскутеринг не является олимпийским спортом."
     }
   ],
   "full-discipline/:name": [
@@ -101,6 +111,18 @@
       "image_urls": ["https://upload.wikimedia.org/wikipedia/commons/0/09/Jomopro09-expert-flat-04.jpg"],
       "description": "BMX (Bicycle Moto Cross) — разновидность велосипеда, изначально придуманная взрослыми любителями мотокросса для тренировок.",
       "rules": "Такой велосипед предназначен для выполнения трюков в основном с применением трамплинов, насыпей и рамп."
+    },
+    {
+      "name": "Skateboarding",
+      "image_urls": ["https://upload.wikimedia.org/wikipedia/commons/a/a9/Skaters1.jpg", "https://upload.wikimedia.org/wikipedia/commons/4/42/Frontsiderock.jpg"],
+      "description": "Скейтбо́рдинг (англ. skateboarding) — экстремальный вид спорта, заключающийся в катании и в исполнении различных трюков на скейтборде.",
+      "rules": "Стойка (англ. stance — стойка, положение) — позиция из которой выполняется трюк. Основная (базовая) стойка зависит от индивидуального удобства перемещения левым/правым боком вперед и использования задней ноги, в качестве щелчковой при прыжке."
+    },
+    {
+      "name": "scootering",
+      "image_urls": ["https://upload.wikimedia.org/wikipedia/commons/7/74/%D0%9F34415.jpg"],
+      "description": "Самокатный спорт или же кикскутеринг (англ. scootering, freestyle scootering) — экстремальный вид спорта, заключающийся в катании и исполнении трюков на специальном трюковом самокате. Человека, занимающегося самокатным спортом, называют самокатером (англ. scooter rider), или просто райдером. На данный момент, кикскутеринг не является олимпийским спортом.",
+      "rules": "Тут описаны правила."
     }
   ]
 }
