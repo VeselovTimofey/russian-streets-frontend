@@ -14,6 +14,7 @@ export type TUserState = {
 
 export interface TDisciplineState {
   disciplines: IDiscipline[],
+  currentDiscipline: IDiscipline,
   isLoading: boolean,
   error: string | undefined,
 }

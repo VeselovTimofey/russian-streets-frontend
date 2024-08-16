@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getDisciplinesNames, getShortСontentofDiscipline, getFullContentofDiscipline } from '../../utils/api/disciplineApi';
+import { getDisciplinesNames, getFullContentofDiscipline } from '../../utils/api/disciplineApi';
 import { IDiscipline } from '../utils/types';
 import { IDisciplineContent } from './actionTypes';
 
@@ -22,11 +22,10 @@ const disciplinesNames = createAsyncThunk<IDiscipline[], void, { rejectValue: st
   },
 );
 
-const disciplineContent = createAsyncThunk<IDiscipline[], IDisciplineContent, { rejectValue: string }>(
-  'discipline/getDisciplineContent', async ( props, { rejectWithValue }) => {
-    const {name, isFullContent} = props;
+const disciplineContent = createAsyncThunk<IDiscipline, IDisciplineContent, { rejectValue: string }>(
+  'discipline/getDisciplineContent', async ( { name }, { rejectWithValue }) => {
     try {
-      const response = isFullContent ? await getFullContentofDiscipline(name) : await getShortСontentofDiscipline(name);
+      const response = await getFullContentofDiscipline(name);
       if (!response.ok) {
         throw new Error('Не удалось получить иноформацию о дисциплине.');
       }

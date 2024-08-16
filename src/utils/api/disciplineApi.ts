@@ -8,17 +8,6 @@ async function getDisciplinesNames() {
   });
 }
 
-async function getShortСontentofDiscipline(name: string) {
-  return api({
-    method: 'GET',
-    endPath: '/discipline',
-    headers: new Headers({ 'Content-Type': 'application/json' }),
-    body: JSON.stringify({
-      name,
-    }),
-  });
-}
-
 async function getFullContentofDiscipline(name: string) {
   return api({
     method: 'GET',
@@ -30,4 +19,4 @@ async function getFullContentofDiscipline(name: string) {
   });
 }
 
-export { getDisciplinesNames, getShortСontentofDiscipline, getFullContentofDiscipline };
+export { getDisciplinesNames, getFullContentofDiscipline };

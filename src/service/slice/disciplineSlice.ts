@@ -10,7 +10,14 @@ const initialState: TDisciplineState = {
     imagesUrl: [''],
     description: '',
     rules: '',
+    isfull: false,
   }],
+  currentDiscipline: {
+    name: '',
+    imagesUrl: [''],
+    description: '',
+    rules: '',
+  },
   isLoading: false,
   error: '',
 };
@@ -29,10 +36,10 @@ const disciplineSlice = createSlice({
         };
         return newState;
       })
-      .addCase(disciplinesNames.fulfilled, (_, action) => {
+      .addCase(disciplinesNames.fulfilled, (state: TDisciplineState, action) => {
         const newState: TDisciplineState = {
+          ...state,
           disciplines: [],
-          error: '',
           isLoading: false,
         };
         action.payload.forEach((element) => {
@@ -65,8 +72,14 @@ const disciplineSlice = createSlice({
         const newState = {
           ...state,
           isLoading: false,
-          discipline: action.payload,
         };
+        const discipline = newState.disciplines.find(discipline => discipline.name === action.payload.name);
+        if ( typeof discipline !== "undefined" ) {
+          discipline.imagesUrl = newState.currentDiscipline.imagesUrl = action.payload.imagesUrl;
+          discipline.description = newState.currentDiscipline.description = action.payload.description;
+          discipline.rules = newState.currentDiscipline.rules = action.payload.rules;
+          discipline.isfull = true;
+        }
         return newState;
       })
       .addCase(disciplineContent.rejected, (state: TDisciplineState, action) => {
