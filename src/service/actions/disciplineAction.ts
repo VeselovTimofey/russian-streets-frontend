@@ -1,7 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { getDisciplinesNames, getFullContentofDiscipline } from '../../utils/api/disciplineApi';
 import { IDiscipline } from '../utils/types';
-import { IDisciplineContent } from './actionTypes';
 
 
 const disciplinesNames = createAsyncThunk<IDiscipline[], void, { rejectValue: string }>(
@@ -22,10 +21,13 @@ const disciplinesNames = createAsyncThunk<IDiscipline[], void, { rejectValue: st
   },
 );
 
-const disciplineContent = createAsyncThunk<IDiscipline, IDisciplineContent, { rejectValue: string }>(
-  'discipline/getDisciplineContent', async ( { name }, { rejectWithValue }) => {
+const disciplineContent = createAsyncThunk<IDiscipline, IDiscipline, { rejectValue: string }>(
+  'discipline/getDisciplineContent', async ( discipline, { rejectWithValue }) => {
+    if (discipline.isfull) {
+      return discipline;
+    }
     try {
-      const response = await getFullContentofDiscipline(name);
+      const response = await getFullContentofDiscipline(discipline.name);
       if (!response.ok) {
         throw new Error('Не удалось получить иноформацию о дисциплине.');
       }

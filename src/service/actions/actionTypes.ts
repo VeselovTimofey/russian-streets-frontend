@@ -18,8 +18,3 @@ export interface TDisciplineState {
   isLoading: boolean,
   error: string | undefined,
 }
-
-export interface IDisciplineContent {
-  name: string,
-  isFullContent: boolean,
-};

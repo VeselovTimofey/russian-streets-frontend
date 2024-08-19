@@ -5,6 +5,7 @@ import Header from './components/Header.tsx';
 import Main from './pages/Main.tsx';
 import NotFound from './pages/NotFound.tsx';
 import Footer from './components/Footer.tsx';
+import Test from './pages/Test.tsx';
 
 function App() {
   const [popupMenu, setPopupMenu] = React.useState(false);
@@ -45,6 +46,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/russian-streets-frontend/' element={<Main />} />
+        <Route path='/russian-streets-frontend/test/' element={<Test />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
