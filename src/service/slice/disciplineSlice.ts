@@ -1,17 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { TDisciplineState } from '../actions/actionTypes';
-import {disciplinesNames, disciplineContent} from '../actions/disciplineAction';
+import { disciplinesNames, disciplineContent } from '../actions/disciplineAction';
+import { DEFAULT_DISCIPLINE } from '../../utils/constans/default-discipline-constans';
 
 
 const initialState: TDisciplineState = {
-  disciplines:
-  [{
-    name: '',
-    imagesUrl: [''],
-    description: '',
-    rules: '',
-    isfull: false,
-  }],
+  disciplines: [ DEFAULT_DISCIPLINE ],
   currentDiscipline: {
     name: '',
     imagesUrl: [''],

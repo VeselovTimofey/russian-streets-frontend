@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { AppDispatch } from "../service/types";
 import { disciplinesNames, disciplineContent } from '../service/actions/disciplineAction';
 import { useAppSelector } from '../service/hooks/hooks';
+import { DEFAULT_DISCIPLINE } from '../utils/constans/default-discipline-constans';
 
 function Test() {
   const dispatch = useDispatch<AppDispatch>();
@@ -11,7 +12,7 @@ function Test() {
     dispatch(disciplinesNames());
   }, [dispatch])
 
-  const onDisciplinesChange = (e) => dispatch(disciplineContent(disciplines.find(discipline => discipline.name === e.target.name)));
+  const onDisciplinesChange: React.MouseEventHandler<HTMLButtonElement> = (e) => dispatch(disciplineContent(disciplines.find(discipline => discipline.name === (e.target as HTMLButtonElement).name) || DEFAULT_DISCIPLINE));
 
   const disciplines = useAppSelector(
     state => state.discipline.disciplines
