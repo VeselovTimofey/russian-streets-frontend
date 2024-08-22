@@ -13,7 +13,8 @@ export type TUserState = {
 };
 
 export interface TDisciplineState {
-  discipline: IDiscipline
+  disciplines: IDiscipline[],
+  currentDiscipline: IDiscipline,
   isLoading: boolean,
-  error: string
+  error: string | undefined,
 }

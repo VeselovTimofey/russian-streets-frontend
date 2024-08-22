@@ -2,7 +2,8 @@ export interface IDiscipline {
   name: string,
   imagesUrl: string[],
   description: string,
-  rules: string
+  rules: string,
+  isfull?: boolean,
 }
 
 export type TdisciplinesButtons = {
