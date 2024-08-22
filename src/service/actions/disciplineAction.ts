@@ -21,10 +21,10 @@ const disciplinesNames = createAsyncThunk<IDiscipline[], void, { rejectValue: st
   },
 );
 
-const disciplineContent = createAsyncThunk<IDiscipline, IDiscipline, { rejectValue: string }>(
+const disciplineContent = createAsyncThunk<IDiscipline[], IDiscipline, { rejectValue: string }>(
   'discipline/getDisciplineContent', async ( discipline, { rejectWithValue }) => {
     if (discipline.isfull) {
-      return discipline;
+      return [discipline];
     }
     try {
       const response = await getFullContentofDiscipline(discipline.name);

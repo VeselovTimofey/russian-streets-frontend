@@ -32,7 +32,7 @@ function Test() {
         </section>
         <section className="disciplines__list">
           {imagesUrl.map(imageUrl => (
-            <img src={imageUrl} />
+            <img src={imageUrl} style={{height: "100px", width: "100px"}} />
           ))}
           <p>{name}</p>
           <p>{description}</p>

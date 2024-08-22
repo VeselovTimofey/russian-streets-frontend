@@ -11,11 +11,8 @@ async function getDisciplinesNames() {
 async function getFullContentofDiscipline(name: string) {
   return api({
     method: 'GET',
-    endPath: '/full-discipline',
+    endPath: '/full-discipline?name=' + name,
     headers: new Headers({ 'Content-Type': 'application/json' }),
-    body: JSON.stringify({
-      name,
-    }),
   });
 }
 
