@@ -1,5 +1,5 @@
-import { useAppSelector } from '../../service/hooks/hooks';
-import MoreLink from './MoreLink.tsx';
+// import { useAppSelector } from '../../service/hooks/hooks';
+// import MoreLink from './MoreLink.tsx';
 
 function Contents() {
   /* const { name, description, imagesUrl } = useAppSelector(

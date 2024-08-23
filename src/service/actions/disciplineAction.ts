@@ -42,4 +42,4 @@ const disciplineContent = createAsyncThunk<IDiscipline[], IDiscipline, { rejectV
   },
 );
 
-export  {disciplinesNames, disciplineContent};
+export  { disciplinesNames, disciplineContent };

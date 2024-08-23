@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux'; 
 
-import { AppDispatch } from "../service/types";
+import { AppDispatch } from '../service/types';
 import { disciplinesNames, disciplineContent } from '../service/actions/disciplineAction';
 import { useAppSelector } from '../service/hooks/hooks';
 import { DEFAULT_DISCIPLINE } from '../utils/constans/default-discipline-constans';
@@ -10,16 +10,16 @@ function Test() {
   const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
     dispatch(disciplinesNames());
-  }, [dispatch])
-
-  const onDisciplinesChange: React.MouseEventHandler<HTMLButtonElement> = (e) => dispatch(disciplineContent(disciplines.find(discipline => discipline.name === (e.target as HTMLButtonElement).name) || DEFAULT_DISCIPLINE));
+  }, [dispatch]);
 
   const disciplines = useAppSelector(
-    state => state.discipline.disciplines
+    state => state.discipline.disciplines,
   );
   const { name, description, imagesUrl, rules } = useAppSelector(
-    state => state.discipline.currentDiscipline
+    state => state.discipline.currentDiscipline,
   );
+
+  const onDisciplinesChange: React.MouseEventHandler<HTMLButtonElement> = (e) => dispatch(disciplineContent(disciplines.find(discipline => discipline.name === (e.target as HTMLButtonElement).name) || DEFAULT_DISCIPLINE));
 
   return (
     <main className='main'>
@@ -32,7 +32,7 @@ function Test() {
         </section>
         <section className="disciplines__list">
           {imagesUrl.map(imageUrl => (
-            <img src={imageUrl} style={{height: "100px", width: "100px"}} />
+            <img src={imageUrl} style={{ height: '100px', width: '100px' }} />
           ))}
           <p>{name}</p>
           <p>{description}</p>

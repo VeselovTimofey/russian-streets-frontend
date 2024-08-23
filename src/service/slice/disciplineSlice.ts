@@ -43,8 +43,8 @@ const disciplineSlice = createSlice({
             description: '',
             rules: '',
             isfull: false,
-          })
-        })
+          });
+        });
         return newState;
       })
       .addCase(disciplinesNames.rejected, (state: TDisciplineState, action) => {
@@ -52,7 +52,7 @@ const disciplineSlice = createSlice({
           ...state,
           isLoading: false,
           error: action.payload,
-        }
+        };
         return newState;
       })
       .addCase(disciplineContent.pending, (state: TDisciplineState) => {
@@ -77,7 +77,7 @@ const disciplineSlice = createSlice({
         };
         const disciplineIndex = newState.disciplines.findIndex(discipline => discipline.name === action.payload[0].name);
         if (newState.disciplines[disciplineIndex].isfull) {
-          newState.currentDiscipline = newState.disciplines[disciplineIndex]
+          newState.currentDiscipline = newState.disciplines[disciplineIndex];
         } else {
           newState.currentDiscipline = newState.disciplines[disciplineIndex] = action.payload[0];
           newState.disciplines[disciplineIndex].isfull = true;
@@ -90,9 +90,9 @@ const disciplineSlice = createSlice({
           ...state,
           isLoading: false,
           error: action.payload,
-        }
+        };
         return newState;
-      })
+      });
   },
 });
 export default disciplineSlice.reducer;
