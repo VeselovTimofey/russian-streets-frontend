@@ -7,9 +7,10 @@ export type TAddUserAction = {
 };
 
 export type TUserState = {
-  user: IUser
-  auth: boolean
-  error: string
+  user: IUser,
+  isLoading: boolean,
+  auth: boolean,
+  error: string | undefined,
 };
 
 export interface TDisciplineState {

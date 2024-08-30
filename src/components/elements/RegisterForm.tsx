@@ -1,25 +1,29 @@
-import { useId } from 'react';
-import { useForm } from 'react-hook-form';
+import { useCallback, useId } from 'react';
+import { type SubmitHandler, useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 
 import Input from './Input.tsx';
 import { IUser } from '../../service/utils/types';
-import { RegUser } from '../../service/actions/userActions';
 import { BUTTON_CLASS } from '../../utils/constans/button-constans';
+import { AppDispatch } from '../../service/types';
+import { userSignUp } from '../../service/actions/userActions';
 
 function RegisterForm() {
+  const dispatch = useDispatch<AppDispatch>();
+
   const id: string = useId();
+
   const {
     register,
     handleSubmit,
     watch,
-    reset,
     formState: { errors },
   } = useForm<IUser>({ mode: 'onBlur' });
 
-  const onSubmit = (data: IUser) => {
-    RegUser(data);
-    reset();
-  };
+  const onSubmit: SubmitHandler<IUser> = useCallback(
+    (data) => dispatch(userSignUp(data)),
+    [dispatch],
+  );
 
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>

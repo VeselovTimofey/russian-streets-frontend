@@ -1,19 +1,23 @@
-import { getRegistrationUser } from '../utils/api';
-import { setCookie } from '../utils/cookes';
-import { IUser } from '../utils/types';
-import { useAppDispatch } from '../hooks/hooks';
-import { addUserSuccess, addUserError } from '../slice/userSlice';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-// регистрация
-export const RegUser = async (data: IUser) => {
-  const dispatch = useAppDispatch();
-  getRegistrationUser(data)
-    .then((res) => {
-      if (res.success) {
-        setCookie('token', res.accessToken, { expires: 1200 });
-        localStorage.setItem('jwt', res.refreshToken);
-        dispatch(
-          addUserSuccess(res.user));
+import { IUser } from '../utils/types';
+import { signUpApi } from '../../utils/api/authApi';
+
+const userSignUp = createAsyncThunk<IUser, IUser, { rejectValue: string }>(
+  'auth/signup', async (userInfo, { rejectWithValue }) => {
+    try {
+      const response = await signUpApi(userInfo);
+      if (!response.ok) {
+        throw new Error('Не удалось зарегистрировать пользавателя.');
       }
-    }).catch((err) => dispatch(addUserError(err)));
-};
+      const data = await response.json();
+      return data;
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        return rejectWithValue(error.message);
+      }
+      return rejectWithValue('Не удалось зарегистрировать пользавателя.');
+    }
+  });
+
+export { userSignUp };
