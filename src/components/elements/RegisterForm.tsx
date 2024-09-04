@@ -7,7 +7,7 @@ import { IRegistrationData, TBoolChangeInput, TStringChangeInput } from '../../s
 import { BUTTON_CLASS } from '../../utils/constans/button-constans';
 import { AppDispatch, RootState } from '../../service/types';
 import { userSignUp } from '../../service/actions/userActions';
-import { userChange } from '../../service/slice/userSlice';
+import { registrationDataChange } from '../../service/slice/userSlice';
 
 function RegisterForm() {
   const dispatch = useDispatch<AppDispatch>();
@@ -30,7 +30,7 @@ function RegisterForm() {
       } else {
         userChangeInput[e.target.id as TStringChangeInput] = e.target.value;
       }
-      dispatch(userChange(userChangeInput)); 
+      dispatch(registrationDataChange(userChangeInput)); 
     },
     [dispatch],
   );

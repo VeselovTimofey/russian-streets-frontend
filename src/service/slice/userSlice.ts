@@ -27,7 +27,7 @@ const userSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    userChange: (state, action: PayloadAction<Partial<IRegistrationData>>) => {
+    registrationDataChange: (state, action: PayloadAction<Partial<IRegistrationData>>) => {
       Object.assign(state.registrationData, action.payload);
     },
   },
@@ -63,4 +63,4 @@ const userSlice = createSlice({
 });
 
 export default userSlice.reducer;
-export const { userChange } = userSlice.actions;
+export const { registrationDataChange } = userSlice.actions;
