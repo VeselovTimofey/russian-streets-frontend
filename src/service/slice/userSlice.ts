@@ -1,13 +1,22 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import { TUserState } from '../actions/actionTypes';
 import { userSignUp } from '../actions/userActions';
+import { IRegistrationData } from '../utils/types';
 
 const initialState: TUserState = {
+  registrationData: {
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    mailing: false,
+    agreement: false,
+  },
   user: {
     firstName: '',
     lastName: '',
+    phone: '',
     email: '',
-    mailing: false,
   },
   isLoading: false,
   auth: false,
@@ -17,17 +26,16 @@ const initialState: TUserState = {
 const userSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {},
+  reducers: {
+    userChange: (state, action: PayloadAction<Partial<IRegistrationData>>) => {
+      Object.assign(state.registrationData, action.payload);
+    },
+  },
   extraReducers: (builder) => {
     builder
-      .addCase(userSignUp.pending, () => {
-        const newState: TUserState = {
-          user: {
-            firstName: '',
-            lastName: '',
-            email: '',
-            mailing: false,
-          },
+      .addCase(userSignUp.pending, (state: TUserState) => {
+        const newState = {
+          ...state,
           isLoading: true,
           auth: false,
           error: '',
@@ -55,3 +63,4 @@ const userSlice = createSlice({
 });
 
 export default userSlice.reducer;
+export const { userChange } = userSlice.actions;

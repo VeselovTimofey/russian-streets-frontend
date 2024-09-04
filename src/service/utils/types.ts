@@ -14,10 +14,17 @@ export type TdisciplinesButtons = {
 export interface IUser {
   firstName: string
   lastName: string
-  phone?: string
+  phone: string
   email: string
+}
+
+export interface IRegistrationData extends IUser {
   password?: string
   doublePassword?: string
   mailing: boolean
-  agreement?: boolean
+  agreement: boolean
 }
+
+export type TStringChangeInput = 'firstName' | 'lastName' | 'phone' | 'email';
+
+export type TBoolChangeInput = 'mailing' | 'agreement';

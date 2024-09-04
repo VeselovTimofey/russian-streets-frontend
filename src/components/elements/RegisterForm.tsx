@@ -1,15 +1,17 @@
-import { useCallback, useId } from 'react';
+import { ChangeEventHandler, useCallback, useId } from 'react';
 import { type SubmitHandler, useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Input from './Input.tsx';
-import { IUser } from '../../service/utils/types';
+import { IRegistrationData, TBoolChangeInput, TStringChangeInput } from '../../service/utils/types';
 import { BUTTON_CLASS } from '../../utils/constans/button-constans';
-import { AppDispatch } from '../../service/types';
+import { AppDispatch, RootState } from '../../service/types';
 import { userSignUp } from '../../service/actions/userActions';
+import { userChange } from '../../service/slice/userSlice';
 
 function RegisterForm() {
   const dispatch = useDispatch<AppDispatch>();
+  const { user } = useSelector((state: RootState) => state.user);
 
   const id: string = useId();
 
@@ -18,9 +20,22 @@ function RegisterForm() {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<IUser>({ mode: 'onBlur' });
+  } = useForm<IRegistrationData>({ mode: 'onBlur' });
 
-  const onSubmit: SubmitHandler<IUser> = useCallback(
+  const onUserChange: ChangeEventHandler<HTMLInputElement> = useCallback(
+    (e) => {
+      const userChangeInput: Partial<IRegistrationData> = {};
+      if (e.target.id === 'mailing' || e.target.id === 'agreement') {
+        userChangeInput[e.target.id as TBoolChangeInput] = e.target.checked;
+      } else {
+        userChangeInput[e.target.id as TStringChangeInput] = e.target.value;
+      }
+      dispatch(userChange(userChangeInput)); 
+    },
+    [dispatch],
+  );
+
+  const onSubmit: SubmitHandler<IRegistrationData> = useCallback(
     (data) => dispatch(userSignUp(data)),
     [dispatch],
   );
@@ -29,12 +44,14 @@ function RegisterForm() {
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
       <Input
         class="register"
-        id="firstname"
+        id="firstName"
         placeholder="" 
         type="text" 
         title="Имя"
+        defaultValue={user.firstName}
         register={
           register('firstName', {
+            onChange: onUserChange,
             required: 'Это поле обязательно для заполнения!',
             pattern: /^[A-Za-z а-яё]+$/i,
           })
@@ -49,6 +66,7 @@ function RegisterForm() {
         title="Фамилия"
         register={
           register('lastName', {
+            onChange: onUserChange,
             required: 'Это поле обязательно для заполнения!',
             pattern: /^[A-Za-zА-Яа-яЁё\s]/i,
           })
@@ -63,6 +81,7 @@ function RegisterForm() {
         title="Номер телефона"
         register={
           register('phone', {
+            onChange: onUserChange,
             pattern: /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
           })
         }
@@ -76,6 +95,7 @@ function RegisterForm() {
         title="E-mail"
         register={
           register('email', {
+            onChange: onUserChange,
             required: 'Это поле обязательно для заполнения!',
             pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
           })
@@ -121,7 +141,7 @@ function RegisterForm() {
       <div /* className={styles.checkbox_block} */>
         <label /* className={styles.label_checkbox} */>
           {' '}
-          <input {...register('mailing')} type='checkbox' />
+          <input id='mailing' {...register('mailing', { onChange: onUserChange })} type='checkbox' />
           <p>
             Я хотел бы подписаться на уведомления о новых событиях
             (необязательно)
@@ -129,8 +149,10 @@ function RegisterForm() {
         </label>
         <label /* className={styles.label_checkbox} */>
           <input
+            id='agreement'
             {...register('agreement', {
               required: 'Это поле обязательно для заполнения!',
+              onChange: onUserChange,
             })}
             type='checkbox'
           />
