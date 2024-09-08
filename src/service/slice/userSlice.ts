@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import { TUserState } from '../actions/actionTypes';
-import { userSignUp } from '../actions/userActions';
+import { userSignUp, userSignIn } from '../actions/userActions';
 import { IRegistrationData } from '../utils/types';
 
 const initialState: TUserState = {
@@ -52,6 +52,32 @@ const userSlice = createSlice({
         return newState;
       })
       .addCase(userSignUp.rejected, (state: TUserState, action) => {
+        const newState = {
+          ...state,
+          isLoading: false,
+          error: action.payload,
+        };
+        return newState;
+      })
+      .addCase(userSignIn.pending, (state: TUserState) => {
+        const newState = {
+          ...state,
+          isLoading: true,
+          auth: false,
+          error: '',
+        };
+        return newState;
+      })
+      .addCase(userSignIn.fulfilled, (state: TUserState, action) => {
+        const newState = {
+          ...state,
+          user: action.payload,
+          isLoading: false,
+          auth: true,
+        };
+        return newState;
+      })
+      .addCase(userSignIn.rejected, (state: TUserState, action) => {
         const newState = {
           ...state,
           isLoading: false,

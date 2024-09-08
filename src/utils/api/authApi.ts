@@ -1,4 +1,4 @@
-import { IUser } from "../../service/utils/types";
+import { IUser, ILoginCredentials } from "../../service/utils/types";
 import api from "./api";
 
 async function signUpApi(user: IUser) {
@@ -10,4 +10,13 @@ async function signUpApi(user: IUser) {
   });
 }
 
-export { signUpApi };
+async function signInApi(loginCredentials: ILoginCredentials) {
+  return api({
+    method: 'GET',
+    endPath: '/user',
+    headers: new Headers({ 'Content-Type': 'application/json'}),
+    body: JSON.stringify(loginCredentials),
+  });
+}
+
+export { signUpApi, signInApi };

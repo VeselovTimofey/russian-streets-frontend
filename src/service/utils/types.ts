@@ -7,22 +7,27 @@ export interface IDiscipline {
 }
 
 export type TdisciplinesButtons = {
-  name: string;
-  to: string
+  name: string,
+  to: string,
 };
 
 export interface IUser {
-  firstName: string
-  lastName: string
-  phone: string
-  email: string
+  firstName: string,
+  lastName: string,
+  phone: string,
+  email: string,
 }
 
 export interface IRegistrationData extends IUser {
-  password?: string
-  doublePassword?: string
-  mailing: boolean
-  agreement: boolean
+  password?: string,
+  doublePassword?: string,
+  mailing: boolean,
+  agreement: boolean,
+}
+
+export interface ILoginCredentials {
+  email: string,
+  password: string,
 }
 
 export type TStringChangeInput = 'firstName' | 'lastName' | 'phone' | 'email';
