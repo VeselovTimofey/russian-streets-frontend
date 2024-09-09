@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Input from './Input.tsx';
 import { type IRegistrationData, type TBoolChangeInput, type TStringChangeInput } from '../../utils/interface/userInterface';
-import { BUTTON_CLASS } from '../../utils/constans/button-constans';
+import { BUTTON_CLASS } from '../../utils/constans/buttonConstans';
 import { type AppDispatch, type RootState } from '../../utils/types/storeTypes';
 import { userSignUp } from '../../service/actions/userActions';
 import { registrationDataChange } from '../../service/slice/userSlice';

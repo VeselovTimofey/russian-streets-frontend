@@ -1,4 +1,4 @@
-import { IDiscipline } from "../../service/utils/types";
+import { IDiscipline } from "../interface/disciplineInterface";
 
 const DEFAULT_DISCIPLINE: IDiscipline = {
   name: '',

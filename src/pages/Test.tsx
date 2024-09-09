@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { type AppDispatch } from '../utils/types/storeTypes';
 import { disciplinesNames, disciplineContent } from '../service/actions/disciplineAction';
 import { useAppSelector } from '../service/hooks/hooks';
-import { DEFAULT_DISCIPLINE } from '../utils/constans/default-discipline-constans';
+import { DEFAULT_DISCIPLINE } from '../utils/constans/defaultDisciplineConstans';
 import RegisterForm from '../components/elements/RegisterForm.tsx';
 
 function Test() {

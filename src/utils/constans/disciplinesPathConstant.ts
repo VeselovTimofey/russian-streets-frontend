@@ -1,6 +1,6 @@
-import { TdisciplinesButtons } from '../../service/utils/types';
+import { IDisciplinesButtons } from '../interface/disciplineInterface';
 
-export const disciplines: TdisciplinesButtons[] = [
+export const disciplines: IDisciplinesButtons[] = [
   { name: 'Skateboarding', to: '/skateboarding' },
   { name: 'Street art', to: '/street art' },
   { name: 'Parkour', to: '/parkour' },

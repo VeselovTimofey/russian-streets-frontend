@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ButtonWithImage from './elements/ButtonWithImage.tsx';
 import Input from './elements/Input.tsx';
 
-import { BUTTON_CLASS } from '../utils/constans/button-constans';
+import { BUTTON_CLASS } from '../utils/constans/buttonConstans';
 
 import logoPath from '../images/svg/logo.svg';
 import locationPath from '../images/svg/location.svg';

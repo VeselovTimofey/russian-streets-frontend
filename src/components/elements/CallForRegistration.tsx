@@ -1,4 +1,4 @@
-import { BUTTON_CLASS } from '../../utils/constans/button-constans';
+import { BUTTON_CLASS } from '../../utils/constans/buttonConstans';
 
 function CallForRegistration() {
   return (

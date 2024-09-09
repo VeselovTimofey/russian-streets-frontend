@@ -1,4 +1,4 @@
-import APIPATH from '../constans/api-constans';
+import APIPATH from '../constans/apiConstans';
 
 interface IApi extends RequestInit {
   endPath: string;
