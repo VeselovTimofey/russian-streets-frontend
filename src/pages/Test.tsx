@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux'; 
 
-import { AppDispatch } from '../service/types';
+import { type AppDispatch } from '../utils/types/storeTypes';
 import { disciplinesNames, disciplineContent } from '../service/actions/disciplineAction';
 import { useAppSelector } from '../service/hooks/hooks';
 import { DEFAULT_DISCIPLINE } from '../utils/constans/default-discipline-constans';

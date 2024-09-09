@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { IUser, ILoginCredentials } from '../utils/types';
+import { type IUser, type ILoginCredentials } from '../../utils/interface/userInterface';
 import { signUpApi, signInApi } from '../../utils/api/authApi';
 
 const userSignUp = createAsyncThunk<IUser, IUser, { rejectValue: string }>(

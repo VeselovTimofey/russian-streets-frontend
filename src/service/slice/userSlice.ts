@@ -1,9 +1,8 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import { TUserState } from '../actions/actionTypes';
+import { type IUserState, IRegistrationData } from '../../utils/interface/userInterface';
 import { userSignUp, userSignIn } from '../actions/userActions';
-import { IRegistrationData } from '../utils/types';
 
-const initialState: TUserState = {
+const initialState: IUserState = {
   registrationData: {
     firstName: '',
     lastName: '',
@@ -33,7 +32,7 @@ const userSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(userSignUp.pending, (state: TUserState) => {
+      .addCase(userSignUp.pending, (state: IUserState) => {
         const newState = {
           ...state,
           isLoading: true,
@@ -42,7 +41,7 @@ const userSlice = createSlice({
         };
         return newState;
       })
-      .addCase(userSignUp.fulfilled, (state: TUserState, action) => {
+      .addCase(userSignUp.fulfilled, (state: IUserState, action) => {
         const newState = {
           ...state,
           user: action.payload,
@@ -51,7 +50,7 @@ const userSlice = createSlice({
         };
         return newState;
       })
-      .addCase(userSignUp.rejected, (state: TUserState, action) => {
+      .addCase(userSignUp.rejected, (state: IUserState, action) => {
         const newState = {
           ...state,
           isLoading: false,
@@ -59,7 +58,7 @@ const userSlice = createSlice({
         };
         return newState;
       })
-      .addCase(userSignIn.pending, (state: TUserState) => {
+      .addCase(userSignIn.pending, (state: IUserState) => {
         const newState = {
           ...state,
           isLoading: true,
@@ -68,7 +67,7 @@ const userSlice = createSlice({
         };
         return newState;
       })
-      .addCase(userSignIn.fulfilled, (state: TUserState, action) => {
+      .addCase(userSignIn.fulfilled, (state: IUserState, action) => {
         const newState = {
           ...state,
           user: action.payload,
@@ -77,7 +76,7 @@ const userSlice = createSlice({
         };
         return newState;
       })
-      .addCase(userSignIn.rejected, (state: TUserState, action) => {
+      .addCase(userSignIn.rejected, (state: IUserState, action) => {
         const newState = {
           ...state,
           isLoading: false,

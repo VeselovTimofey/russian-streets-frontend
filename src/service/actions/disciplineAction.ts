@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { getDisciplinesNames, getFullContentofDiscipline } from '../../utils/api/disciplineApi';
-import { IDiscipline } from '../utils/types';
+import { type IDiscipline } from '../../utils/interface/disciplineInterface';
 
 
 const disciplinesNames = createAsyncThunk<IDiscipline[], void, { rejectValue: string }>(

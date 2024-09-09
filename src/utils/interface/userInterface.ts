@@ -1,23 +1,10 @@
-export interface IDiscipline {
-  name: string,
-  imagesUrl: string[],
-  description: string,
-  rules: string,
-  isfull?: boolean,
-}
-
-export type TdisciplinesButtons = {
-  name: string,
-  to: string,
-};
-
 export interface IUser {
   firstName: string,
   lastName: string,
   phone: string,
   email: string,
 }
-
+  
 export interface IRegistrationData extends IUser {
   password?: string,
   doublePassword?: string,
@@ -25,11 +12,18 @@ export interface IRegistrationData extends IUser {
   agreement: boolean,
 }
 
+export interface IUserState {
+  registrationData: IRegistrationData,
+  user: IUser,
+  isLoading: boolean,
+  auth: boolean,
+  error: string | undefined,
+}
+
 export interface ILoginCredentials {
   email: string,
   password: string,
 }
-
+  
 export type TStringChangeInput = 'firstName' | 'lastName' | 'phone' | 'email';
-
 export type TBoolChangeInput = 'mailing' | 'agreement';

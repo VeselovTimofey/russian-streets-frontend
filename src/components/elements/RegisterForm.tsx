@@ -3,9 +3,9 @@ import { type SubmitHandler, useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Input from './Input.tsx';
-import { IRegistrationData, TBoolChangeInput, TStringChangeInput } from '../../service/utils/types';
+import { type IRegistrationData, type TBoolChangeInput, type TStringChangeInput } from '../../utils/interface/userInterface';
 import { BUTTON_CLASS } from '../../utils/constans/button-constans';
-import { AppDispatch, RootState } from '../../service/types';
+import { type AppDispatch, type RootState } from '../../utils/types/storeTypes';
 import { userSignUp } from '../../service/actions/userActions';
 import { registrationDataChange } from '../../service/slice/userSlice';
 
