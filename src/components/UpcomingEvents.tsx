@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import eventsJson from '../utils/json/newEvents.json';
 import EventCard from './elements/EventCard.tsx';
-import { BUTTON_CLASS } from '../utils/constans/button-constans';
+import { BUTTON_CLASS } from '../utils/constans/buttonConstans';
 
 function UpcomingEvents() {
   const events = JSON.parse(JSON.stringify(eventsJson));

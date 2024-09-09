@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import  newsJson from '../utils/json/lastNews.json';
 import NewsCard from './elements/NewsCard.tsx';
-import { BUTTON_CLASS } from '../utils/constans/button-constans';
+import { BUTTON_CLASS } from '../utils/constans/buttonConstans';
 
 type InputProps = {
   isSixNews: boolean;

@@ -1,19 +1,42 @@
-import { getRegistrationUser } from '../utils/api';
-import { setCookie } from '../utils/cookes';
-import { IUser } from '../utils/types';
-import { useAppDispatch } from '../hooks/hooks';
-import { addUserSuccess, addUserError } from '../slice/userSlice';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-// регистрация
-export const RegUser = async (data: IUser) => {
-  const dispatch = useAppDispatch();
-  getRegistrationUser(data)
-    .then((res) => {
-      if (res.success) {
-        setCookie('token', res.accessToken, { expires: 1200 });
-        localStorage.setItem('jwt', res.refreshToken);
-        dispatch(
-          addUserSuccess(res.user));
+import { type IUser, type ILoginCredentials } from '../../utils/interface/userInterface';
+import { signUpApi, signInApi } from '../../utils/api/authApi';
+
+const userSignUp = createAsyncThunk<IUser, IUser, { rejectValue: string }>(
+  'auth/signup', async (userInfo, { rejectWithValue }) => {
+    try {
+      const response = await signUpApi(userInfo);
+      if (!response.ok) {
+        throw new Error('Не удалось зарегистрировать пользователя.');
       }
-    }).catch((err) => dispatch(addUserError(err)));
-};
+      const data = await response.json();
+      return data;
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        return rejectWithValue(error.message);
+      }
+      return rejectWithValue('Не удалось зарегистрировать пользователя.');
+    }
+  },
+);
+
+const userSignIn = createAsyncThunk<IUser, ILoginCredentials, { rejectValue: string }>(
+  'auth/signin', async (loginCredentials, { rejectWithValue }) => {
+    try {
+      const response = await signInApi(loginCredentials);
+      if (!response.ok) {
+        throw new Error('Не удалось авторизоваться.');
+      }
+      const data = await response.json();
+      return data;
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        return rejectWithValue(error.message);
+      }
+      return rejectWithValue('Не удалось авторизоваться.');
+    }
+  },
+);
+
+export { userSignUp, userSignIn };

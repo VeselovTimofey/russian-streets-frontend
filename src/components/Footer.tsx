@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import logoPath from '../images/svg/logo.svg';
-import { BUTTON_CLASS } from '../utils/constans/button-constans';
+import { BUTTON_CLASS } from '../utils/constans/buttonConstans';
 import vkPath from '../images/svg/vk.svg';
 import youtubePath from '../images/svg/youtube.svg';
 

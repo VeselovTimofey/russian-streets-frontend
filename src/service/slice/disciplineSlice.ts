@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { TDisciplineState } from '../actions/actionTypes';
+import { IDisciplineState } from '../../utils/interface/disciplineInterface';
 import { disciplinesNames, disciplineContent } from '../actions/disciplineAction';
-import { DEFAULT_DISCIPLINE } from '../../utils/constans/default-discipline-constans';
+import { DEFAULT_DISCIPLINE } from '../../utils/constans/defaultDisciplineConstans';
 
 
-const initialState: TDisciplineState = {
+const initialState: IDisciplineState = {
   disciplines: [ DEFAULT_DISCIPLINE ],
   currentDiscipline: {
     name: '',
@@ -22,7 +22,7 @@ const disciplineSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(disciplinesNames.pending, (state: TDisciplineState) => {
+      .addCase(disciplinesNames.pending, (state: IDisciplineState) => {
         const newState = {
           ...state,
           error: '',
@@ -30,8 +30,8 @@ const disciplineSlice = createSlice({
         };
         return newState;
       })
-      .addCase(disciplinesNames.fulfilled, (state: TDisciplineState, action) => {
-        const newState: TDisciplineState = {
+      .addCase(disciplinesNames.fulfilled, (state: IDisciplineState, action) => {
+        const newState: IDisciplineState = {
           ...state,
           disciplines: [],
           isLoading: false,
@@ -43,19 +43,19 @@ const disciplineSlice = createSlice({
             description: '',
             rules: '',
             isfull: false,
-          })
-        })
+          });
+        });
         return newState;
       })
-      .addCase(disciplinesNames.rejected, (state: TDisciplineState, action) => {
+      .addCase(disciplinesNames.rejected, (state: IDisciplineState, action) => {
         const newState = {
           ...state,
           isLoading: false,
           error: action.payload,
-        }
+        };
         return newState;
       })
-      .addCase(disciplineContent.pending, (state: TDisciplineState) => {
+      .addCase(disciplineContent.pending, (state: IDisciplineState) => {
         const newState = {
           ...state,
           error: '',
@@ -63,7 +63,7 @@ const disciplineSlice = createSlice({
         };
         return newState;
       })
-      .addCase(disciplineContent.fulfilled, (state: TDisciplineState, action) => {
+      .addCase(disciplineContent.fulfilled, (state: IDisciplineState, action) => {
         const newState = {
           ...state,
           isLoading: false,
@@ -77,7 +77,7 @@ const disciplineSlice = createSlice({
         };
         const disciplineIndex = newState.disciplines.findIndex(discipline => discipline.name === action.payload[0].name);
         if (newState.disciplines[disciplineIndex].isfull) {
-          newState.currentDiscipline = newState.disciplines[disciplineIndex]
+          newState.currentDiscipline = newState.disciplines[disciplineIndex];
         } else {
           newState.currentDiscipline = newState.disciplines[disciplineIndex] = action.payload[0];
           newState.disciplines[disciplineIndex].isfull = true;
@@ -85,14 +85,14 @@ const disciplineSlice = createSlice({
         newState.isLoading = false;
         return newState;
       })
-      .addCase(disciplineContent.rejected, (state: TDisciplineState, action) => {
+      .addCase(disciplineContent.rejected, (state: IDisciplineState, action) => {
         const newState = {
           ...state,
           isLoading: false,
           error: action.payload,
-        }
+        };
         return newState;
-      })
+      });
   },
 });
 export default disciplineSlice.reducer;

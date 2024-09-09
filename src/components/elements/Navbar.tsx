@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
-import { TdisciplinesButtons } from '../../service/utils/types';
+import { type IDisciplinesButtons } from '../../utils/interface/disciplineInterface';
 //import { FindDiscipline } from '../../service/actions/disciplineAction';
-import { disciplines } from '../../service/utils/constant';
+import { disciplines } from '../../utils/constans/disciplinesPathConstant';
 
 function Navbar() {
   /* function handleClick(name: string) {
@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
     <ul className="disciplines__list">
-      {disciplines.map((item: TdisciplinesButtons): ReactElement => {
+      {disciplines.map((item: IDisciplinesButtons): ReactElement => {
         return (
           <li
             className="disciplines__element text-font text-font_regular text-font_size_big"

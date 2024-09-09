@@ -27,7 +27,7 @@
     "src/utils/constans",
     "src/utils/types/images.d.ts",
     "src/App.tsx",
-    "src/index.tsx",
+    "src/index.tsx", "src/utils/interface/disciplineInterface.ts", "src/utils/types/storeTypes.ts",
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
