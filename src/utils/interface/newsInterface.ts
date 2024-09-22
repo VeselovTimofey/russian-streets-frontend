@@ -1,9 +1,9 @@
 export interface INews {
   id: string,
   name: string,
-  image_urls: string[],
-  discription: string,
-  pub_date?: string,
+  imageUrl: string,
+  description: string,
+  pubDate?: string,
 }
 
 export interface INewsState {

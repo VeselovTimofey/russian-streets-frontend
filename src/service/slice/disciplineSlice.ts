@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { IDisciplineState } from '../../utils/interface/disciplineInterface';
+import { type IDisciplineState } from '../../utils/interface/disciplineInterface';
 import { disciplinesNames, disciplineContent } from '../actions/disciplineAction';
 import { DEFAULT_DISCIPLINE } from '../../utils/constans/defaultDisciplineConstans';
 
