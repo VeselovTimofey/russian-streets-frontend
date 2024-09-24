@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { type INewsState } from '../../utils/interface/newsInterface';
-import { lastNewsAction } from '../actions/newsAction';
+import { lastNewsAction, pageNewsAction } from '../actions/newsAction';
 
 
 const initialState: INewsState = {
@@ -10,6 +10,15 @@ const initialState: INewsState = {
       name: '',
       imageUrl: '',
       description: '',
+    },
+  ],
+  pageNews: [
+    {
+      id: '-1',
+      name: '',
+      imageUrl: '',
+      description: '',
+      pubDate: '01-01-1990',
     },
   ],
   news: [
@@ -45,6 +54,23 @@ const newsSlice = createSlice({
         });
       })
       .addCase(lastNewsAction.rejected, (state: INewsState, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      .addCase(pageNewsAction.pending, (state: INewsState) => {
+        state.error = '';
+        state.isLoading = true;
+      })
+      .addCase(pageNewsAction.fulfilled, (state: INewsState, action) => {
+        state.pageNews = action.payload;
+        state.isLoading = false;
+        action.payload.forEach((newNews) => {
+          if (!(state.news.find(currentNews => currentNews.id === newNews.id))) {
+            state.news.push(newNews);
+          }
+        });
+      })
+      .addCase(pageNewsAction.rejected, (state: INewsState, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });

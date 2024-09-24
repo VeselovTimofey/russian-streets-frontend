@@ -8,6 +8,7 @@ export interface INews {
 
 export interface INewsState {
   lastNews: INews[],
+  pageNews: INews[],
   news: INews[],
   isLoading: boolean,
   error: string | undefined,
