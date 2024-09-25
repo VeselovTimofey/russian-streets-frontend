@@ -16,4 +16,12 @@ async function getPageNews(page: number) {
   });
 }
 
-export { getLastNews, getPageNews };
+async function getNews(id: string) {
+  return api({
+    method: 'GET',
+    endPath: '/news?id=' + id,
+    headers: new Headers({ 'Content-Type': 'application/json'}),
+  });
+}
+
+export { getLastNews, getPageNews, getNews };

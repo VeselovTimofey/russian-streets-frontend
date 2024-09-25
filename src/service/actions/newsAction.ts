@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getLastNews, getPageNews } from '../../utils/api/newsApi';
-import { type INews } from '../../utils/interface/newsInterface';
+import { getLastNews, getPageNews, getNews } from '../../utils/api/newsApi';
+import { type INews, type IAnswerNewsAction } from '../../utils/interface/newsInterface';
 
 const lastNewsAction = createAsyncThunk<INews[], void, { rejectValue: string }>(
   'news/getLastNews', async (_, { rejectWithValue }) => {
@@ -38,4 +38,25 @@ const pageNewsAction = createAsyncThunk<INews[], { page: number }, { rejectValue
   },
 );
 
-export { lastNewsAction, pageNewsAction };
+const newsAction = createAsyncThunk<IAnswerNewsAction, { id: string, saveNewsId: string[] }, { rejectValue: string }>(
+  'news/getNews', async ({ id, saveNewsId }, { rejectWithValue }) => {
+    if (id in saveNewsId) {
+      return { id: id, alreadyInStore: true };
+    }
+    try {
+      const response = await getNews(id);
+      if (!response.ok) {
+        throw new Error('Не удалось загрузить новость.');
+      }
+      const data = await response.json();
+      return { news: data, alreadyInStore: false };
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        return rejectWithValue(error.message);
+      }
+      return rejectWithValue('Не удалось загрузить новость.');
+    }
+  },
+);
+
+export { lastNewsAction, pageNewsAction, newsAction };
