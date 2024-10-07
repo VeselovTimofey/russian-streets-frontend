@@ -7,7 +7,7 @@ const lastNewsAction = createAsyncThunk<INews[], void, { rejectValue: string }>(
     try {
       const response = await getLastNews();
       if (!response.ok) {
-        throw new Error('Не удалось загрузить новости.');
+        throw new Error('Не удалось загрузить последние новости.');
       }
       const data = await response.json();
       return data;
@@ -15,7 +15,7 @@ const lastNewsAction = createAsyncThunk<INews[], void, { rejectValue: string }>(
       if (error instanceof Error) {
         return rejectWithValue(error.message);
       }
-      return rejectWithValue('Не удалось загрузить новости.');
+      return rejectWithValue('Не удалось загрузить последние новости.');
     }
   },
 );
