@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { getLastEvents, getDailyEvents, getEvent } from '../../utils/api/eventApi';
-import { type IEvent } from '../../utils/interface/eventInterface';
+import { type IEvent, type IAnswerEventAction } from '../../utils/interface/eventInterface';
 
 const lastEventsAction = createAsyncThunk<IEvent[], void, { rejectValue: string }>(
   'events/getLastEvents', async (_, { rejectWithValue }) => {
@@ -38,15 +38,18 @@ const dailyEventsAction = createAsyncThunk<IEvent[], { date: string }, { rejectV
   },
 );
 
-const eventAction = createAsyncThunk<IEvent[], { id: string }, { rejectValue: string }>(
-  'events/getEvent', async ({ id }, { rejectWithValue }) => {
+const eventAction = createAsyncThunk<IAnswerEventAction, { id: string, saveEventId: string[] }, { rejectValue: string }>(
+  'events/getEvent', async ({ id, saveEventId }, { rejectWithValue }) => {
+    if (id in saveEventId) {
+      return { id: id, alreadyInStore: true };
+    }
     try {
       const response = await getEvent(id);
       if (!response.ok) {
         throw new Error('Не удалось загрузить событие.');
       }
       const data = await response.json();
-      return data;
+      return { event: data, alreadyInStore: false };
     } catch (error: unknown) {
       if (error instanceof Error) {
         return rejectWithValue(error.message);

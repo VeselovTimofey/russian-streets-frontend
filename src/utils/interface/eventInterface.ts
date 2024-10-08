@@ -12,8 +12,16 @@ export interface IEvent {
 
 export interface IEventState {
   lastEvents: IEvent[],
+  dayEvents: IEvent[],
+  currentEvent: IEvent | undefined,
   savedEventsId: string[],
   events: IEvent[],
   isLoading: boolean,
   error: string | undefined,
+}
+
+export interface IAnswerEventAction {
+  id?: string,
+  event?: IEvent,
+  alreadyInStore: boolean,
 }

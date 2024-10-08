@@ -1,4 +1,4 @@
-import { IDiscipline } from "../interface/disciplineInterface";
+import { type IDiscipline } from "../interface/disciplineInterface";
 
 const DEFAULT_DISCIPLINE: IDiscipline = {
   name: '',
@@ -8,4 +8,4 @@ const DEFAULT_DISCIPLINE: IDiscipline = {
   isfull: true,
 }
 
-export {DEFAULT_DISCIPLINE};
+export { DEFAULT_DISCIPLINE };
