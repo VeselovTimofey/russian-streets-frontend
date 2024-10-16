@@ -7,7 +7,7 @@ import { lastNewsAction } from '../service/actions/newsAction';
 import { useAppDispatch, useAppSelector } from '../service/hooks/hooks';
 
 type InputProps = {
-  isSixNews: boolean;
+  isSixNews: boolean,
 };
 
 function LastNews(props: InputProps) {

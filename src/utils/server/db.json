@@ -259,5 +259,64 @@
       "ImageUrl": "https://rus-petroleum.ru/uploads/photos/20210222-1.png",
       "pubDate": "26-12-2021"
     }
-  ]
+  ],
+  "about-us": {
+    "ourMember": [
+      {
+        "id": "1",
+        "name": "Алексей",
+        "description": "“Танцы под ритмы хип-хопа вместе с такими талантливыми людьми — это совершённая мечта. Это было моё первое выступление и меня переполняют эмоции.”",
+        "role": "Общественный деятель",
+        "imageUrl": "https://s3-alpha-sig.figma.com/img/33b4/39dc/4c26ae0d728c67b0420b5d0c58e7fae5?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Uj81cZ7L-4IXJuH1yECEge7FYXYTC3OkHQmU-P25Md3munFtfSX6cRpOMTrRCr~ozH~PbQt79l7zOrVPj-S57lieNVdfjU7w9YH-9JRmeDSpSx~sfYKsE9GL~cnVxzG1C6PcfCInyiePsnn2WF5P421B8J1sIOoOBTwrCTKXstJdNEVC7J~kKijH-3-yEd87saKHI39qKeksRu8X3Qq6ABiBUBkyUk6LGqr~j-qBtmPzoxf7dOJ-jVlgShkkOPgyaunzLoCWF6ULjfBNb-xMBcp9mQ7ETQYe6xxnG-iaLKftltdr8-fS1aaiyG-xF~icFV4w-z0SDM1NomyP9ZC2mg__"
+      },
+      {
+        "id": "2",
+        "name": "Лена",
+        "description": "“Уличное искусство стало не просто моим хобби, а способом выражения самой я. В каждой краске, каждой линии рисунка я оставляю частичку своей души и открываю для себя мир новых возможностей.”",
+        "role": "Волонтер",
+        "imageUrl": "https://s3-alpha-sig.figma.com/img/4f85/124a/8555211e3fa609a51949373340a8ac20?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iKsawHjcPG5iFgf5fKv5fac4A9ZK6G-K-iMfSe~jpP02CVtw4LDcEn91FhQtTiOhkEdXoxcqbD5PZi~Rgo2F81MNiWUsgmPKUay3QhbO~a6SeE4jDStTGV7M186EvH3ewQ86LX5~G4~ZjZKhSLLdfQxlj7UbcqC4uUZVbilYWhjoiWSOjClHf4kO4e2FLgmB3vXMD89Wuo2Gi5Hj8jHBiVsrp2fCX-gDuBEp9mZISS2p4eo~5X99nOzC-mKkoZ9H4wzj0tNZJ07VN3aOoM9tu9BxY2sK1JDrCH~nmmziaNTMa2tBN7I8HSB92xpfPvP6PBwcqNDfQHh9AqprJOXk4g__"
+      },
+      {
+        "id": "3",
+        "name": "Мария",
+        "description": "“Участие в мире стрит-арта в 48 лет - это увлекательное приключение, которое перевернуло мое представление об искусстве и самовыражении. “",
+        "role": "Учитель",
+        "imageUrl": "https://s3-alpha-sig.figma.com/img/e1d1/2d82/0f7b3b1a54dcb5c26a4106252e9bd17b?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dtMcKCqP~sGRIQzoa8Wh6g0OPzMpSfywPWEFdNlk7yMyk3k6MXwsiaym7GzTEWjKzapDABRsQkcdhpfzUPo76xr4BbNAksF20h-HsZngfKScT5PsxocwpXJWfHonigHeDUFZKDy6j9TF89D9NNvghgxMtfeiUlpTZtal8hVRf-AoXXT1rPp0eSwY9YYBMoGyOjYcN39-q7FTPsEuJEdWiZQXafuL6TJ1m0hTnUa1AJ4FPyHjqJzHBGvjOhfSQ9YWTd9Qu~xxUWPEAWBtUl~6PMRoj1NeVK2tSXlxMI2yIhDudw98tU5y6jHLCctbp3~qTqJsum460AVC-1E0PZ1nVg__"
+      },
+      {
+        "id": "4",
+        "name": "Стас",
+        "description": "“Паркур открыл передо мной адреналином наполненное путешествие самопознания. Ответственность, высота, плавные движения - это как поэзия в движении.”",
+        "role": "Студент",
+        "imageUrl": "https://s3-alpha-sig.figma.com/img/daf0/ee35/89f4dee090952e29de7789bf776c4943?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BfaLOzoqYgtTks9L4LBLGOGn4eN5qcT9FSUY0awpZ8~mpqEcSobnh8ctiwtJ7dduh3awuZ48s6xc8Ixo3mME~60zbXSlsUyAnhBoSwYJbE-cLwYiUmDZszvMz269IWgJgilbNjmbOrs9U3RefBCmcTmvEuhsBPNlwQHmHWHXPs7fkuykt1X5GdLpsCtr7b8lOe1s9Bj5KCHtPYOytzjBEomFJhD1LhQFmbHePfyx~gWqb6g4pOrLvzz-Mp0E6w8u7gc~FutTIQsskO1cUyLitwSkCpCn~GA5zdxNmWEczSql5~H7O3zkEfRz5dj7zGAaPYZc3RI0-7zYWji5dxNjng__"
+      }
+    ],
+    "partners": [
+      {
+        "name": "фонд президентских грантов",
+        "imageUrl": "https://s3-alpha-sig.figma.com/img/3120/3341/5a25b19ee48072e249afd80d875833ee?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Z5MoOtfMl1cRq4F3niC57dCc5Q7-lCxpqq~LcTgbijRhdXFQSYlMiVPs-L3dtUr8xT5E6Ex90iJu4eewXuDxOE3vMpboJLSU6sALdTpD0Cx1P1cybzUj4miXpMbQom9fOMeByKTKnMykAkGEHzqgKhrJzDR6wwTdiF91PGObk-6yh2NyJzIbjIwHcLo5XtyGsR0YRxmIsZdWpe7~tZCgvgGPizxUDX7vvp4Q~qYNQBOffxAPHlNvT8I9-WpuqntvR4jcixMjBuII7CxhqolPcqYw3kHWcdyLcZm5UQq1-NwTTochZenk7W7jwReFojCz1VWUWN4dFdMY4mnO52SpeQ__"
+      },
+      {
+        "name": "росмолодёжь",
+        "imageUrl": "https://s3-alpha-sig.figma.com/img/c171/9136/8247251ecbbdf337d16e2fe1aaa8f378?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Oma~al6BDIZCW-~DUydZNBCEXNVnql61GQoFwygz~aKl8fm6dHb3ea-LSjsor4013QzyUTDrfYaMlqziJgQpyrBSM1E79XHxjvQL56Jh6fT31buo1mD6hoYErnKWz4payIzYGQm6atQGMJX418iD5Aygb7dUZ-d06CLUfrwT4Q3xIuWFhWnIdEPVC6W6pvFmaxNfnWXtL7C7PMXlahGO-Hz0X556gkj3SEvkgr31elL~U52zg8DfknXbcfr4mWDSqgsqdnuKOXSiXaLf0ZHBHvdt8uvB6jg0D2SHfGShkq1CWHhoEI4Ep0SLhsAE460is5P7UuwiQhlRha8OW44ixA__"
+      },
+      {
+        "name": "ассоциация студенческих спортивных клубов России",
+        "imageUrl": "https://s3-alpha-sig.figma.com/img/5a59/91ed/07925a495986c8f9b17ed8a70b9465e5?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hOPJyzvTXBQBHjXuqs4JF~KIpUbl4twig4qZHUBPwsMS3wRmIGYAkJrUBTGsEQ5ulqmWUSWINb14MsFRUYe3O0HctmClIDukQ4CP5M~J9RFeMniEx9vwlTmpMwHItdeXBTNZmvIMnOiuf54j9QH5v-rve1QSh3RHoj0ahZ2IXE7FaLjQlJEEswB0ZYttphJDDLsdYQ5BpVnMRCVGX~VXBVPF99yWroR3-~9uKIvVqFRSscmaYL3JUOrPnoQo14WgnCMmAINXbJsOHSbhzmRyqfM6-IX3tqGLrc7DFvbo6~B5oT3kGeD8UcjAflVhGITqJRbI5pJV4iZBkcCz5Y3LFQ__"
+      },
+      {
+        "name": "offbeats",
+        "imageUrl": "https://s3-alpha-sig.figma.com/img/bd05/0543/5b2c8c7ce6c1bfe8b6d3d406ff934913?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=om6P6GslDssiy1bgVf5zIjbRXPvrCnGqrJUh-IukfeV8m-ssTuCQqH3SLrp0T~qAEYydQlExwhE7lv8lcyjnt7S7yw2gB4fa-6mKwEXcHWu2ICYqkm7e6N~iaumQv8kVhjvz2Oq-6WgMVR6Q5tkZctc9rOu4OJDnb1j~5-71x1ezu2Wv7OSQWrNGCEkTDTVMAqlgpairR70lNG1dBnZJhC-WZreiLMTdZuUUZ~4JnkCIwkISo2UgfZfI3dAvghfte49AJQoDnYRhbl2hekqUrR~o4eWwwKs8MBebvMU24f42mgZGpi5QYtbljugSYG5Og9adeWRF~ZDy7To9wJY8Zg__"
+      },
+      {
+        "name": "благотворительный фонд Владимира Потанина",
+        "imageUrl": "https://s3-alpha-sig.figma.com/img/0f1a/30b7/7c69308106586febcacad8567895398b?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CkOXMNhbF138ryU31tgCszC9xBCW44gWCEpx6Gpnsx4nD~AZwGh6jQKQDYOqc7e8DZSNF8gCyxPoR56g336Nf1L4CGouSprPM9D8qJLZ9DJaezO8iGTFjnuObt5xLl7epwOWAxEiUeSGIBOoRBGJtYGXCkQs1dPmwS83euJFdiuPgWZI561hDcjARPDn2zT9YcZu6LosEGG~iElz6ckaAkzpkb-t8a0Z0IGmS-wFruUP~if91C1an0xc78EPH0qLyaEyJxkWdY3qjEBVjrh7QPssyr-SiYgaJo2k6jiePGYZicr8kqqTdUxBRjZ~LDR8vO7ROzDiX3SuMbZyazFMQA__"
+      },
+      {
+        "name": "Северо-Кавказский федеральный университет",
+        "imageUrl": "https://s3-alpha-sig.figma.com/img/3799/d67a/e040d54a74d46630a78d481bd312e4ea?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gfjjp-kyaAIYunVpinas-sT3FSaj7MgbgBT-xH9ikGrhdwCccYEu4c0yeFX5I13qfg1s70mnsQ0huEOCFT65c1sDoP4qmUm-PcgfdBPghryvSPmRnHNKu~l7VNn7xfkz3lFqvDJzuoSlmb6M0h1016~nuCvXeb47~5gmq4t9ZzAhir6dn4nM7EGZ8-2M9xcFO39KsOQ9k-8~5Nr5WVx8DeI1XRIPGBoSTTFBiz8mNXjCoQbh3s8Sh2PtqRaotxHsw5MpUtgtiGHoklHV8y1g7gcLXQr9-IzaTaCl3KLBvAw8vZSREkgAytk85JwmYw6sDxBPkhCm1IxLqKzkTImM7g__"
+      }
+    ],
+    "videoUrl": "video"
+  }
 }

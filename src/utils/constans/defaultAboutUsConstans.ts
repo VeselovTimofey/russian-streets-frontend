@@ -6,14 +6,15 @@ const DEFAULT_ABOUT_US: IAboutUs = {
       id: '-1',
       name: '',
       description: '',
+      role: '',
       imageUrl: '',
-    }
+    },
   ],
   partners: [
     {
       name: '',
       imageUrl: '',
-    }
+    },
   ],
   videoUrl: '',
 }

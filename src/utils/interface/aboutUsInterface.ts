@@ -1,7 +1,8 @@
-interface IMember {
+export interface IMember {
   id: string,
   name: string,
   description: string,
+  role: string,
   imageUrl: string,
 }
 

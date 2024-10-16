@@ -22,6 +22,7 @@ const aboutUsSlice = createSlice({
       })
       .addCase(aboutUsAction.fulfilled, (state: IAboutUsState, action) => {
         state.aboutUs = action.payload;
+        state.isLoaded = true;
         state.isLoading = false;
       })
       .addCase(aboutUsAction.rejected, (state: IAboutUsState, action) => {
