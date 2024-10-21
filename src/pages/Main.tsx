@@ -30,7 +30,7 @@ function Main() {
       <Members ourMember={aboutUs.aboutUs.ourMember} />
       <AboutUs />
       <OurOffers />
-      <OurPossibilities />
+      <OurPossibilities partners={aboutUs.aboutUs.partners} />
       <UpcomingEvents />
       <LastNews isSixNews={true} />
       <Registration />

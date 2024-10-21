@@ -6,7 +6,7 @@ export interface IMember {
   imageUrl: string,
 }
 
-interface IPartner {
+export interface IPartner {
   name: string,
   imageUrl: string,
 }
